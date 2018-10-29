@@ -1,0 +1,47 @@
+ {% if images %}
+<div id="slider" class="flexslider">
+    <ul class="slides">
+        {% for image in images %}
+        <li>
+            <img src="{{ image.thumb(auto, auto, 'crop') }}" alt="" />
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+<div id="carousel" class="flexslider carousel-tour">
+    <ul class="slides">
+        {% for image in images %}
+        <li>
+            <img src="{{ image.thumb(198, 100, 'crop') }}" alt="" />
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endif %}
+
+<script type="text/javascript">
+    $(window).load(function () {
+        // The slider being synced must be initialized first
+        $('#carousel').flexslider({
+            animation: "slide",
+            controlNav: false,
+            animationLoop: false,
+            slideshow: false,
+            itemWidth: 198,
+            asNavFor: '#slider',
+            directionNav: false
+        });
+
+        $('#slider').flexslider({
+            animation: "fade",
+            controlNav: false,
+            animationLoop: true,
+            slideshow: false,
+            sync: "#carousel",
+            directionNav: false,
+            mousewheel: true,
+
+        });
+    });
+</script>

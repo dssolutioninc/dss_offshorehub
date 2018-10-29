@@ -1,0 +1,11 @@
+#octoberCMS 
+storage
+vendor
+install_files
+bower_components
+
+#others
+.htaccess
+.DS_Store
+config
+info.php

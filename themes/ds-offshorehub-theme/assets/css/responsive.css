@@ -1,0 +1,506 @@
+@media (max-width:1200px){
+.plan-banner{
+    width: 150px;
+}    
+.plan-banner > span {
+    font-size: 16px;
+}
+.plan-banner > h4 {
+    font-size: 36px;
+}
+.plan-tour {
+    padding-left: 150px;
+}
+.input-field.select label {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.input-field {
+    padding: 5px;
+}
+.plan-tour {
+    min-height: 0;
+}
+.ft-title,.ft-offer {
+    margin-bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+} 
+
+
+@media (min-width:768px) and (max-width:991px){
+
+#site-logo {
+    margin: 10px auto;
+    display: table;
+}    
+.left-part, .right-part {
+    width: 300px;
+    text-align: center;
+    display: table;
+    margin: 0 auto;
+    float: none;
+}
+.left-part span,.right-part span {
+    width: 100%;
+    margin: 0 0 10px 0;
+    border: 0;
+}
+.left-part .social-media, .right-part form {
+    margin: 0 auto 10px;
+    float: none;
+    display: table;
+    border: 0;
+    padding: 0;
+}
+.main-nav {
+    display: table;
+    width: 300px;
+    margin: 0 auto;
+}
+.main-nav {
+    display: table;
+    margin: 0 auto;
+    width: 300px;
+    z-index: 10000;
+    position: relative;
+}
+.main-nav span {
+    background: none repeat scroll 0 0 #454545;
+    cursor: pointer;
+    height: 40px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    display: block;
+    line-height: 36.1px;
+    font-size: 35.1px;
+    color: #000;
+}
+.main-nav #main-menu {
+    left: 0;
+    position: absolute;
+    top: 100%;
+    display: none;
+}
+#main-menu li {
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+}
+#main-menu li a {
+    padding: 0 20px;
+}
+#main-menu li ul, #main-menu li ul li ul {
+    left: 0;
+    opacity: 1;
+    position: relative;
+    width: 100%;
+    display: none;
+}
+#main-menu li ul li a, #main-menu li ul li ul li a {
+    padding: 10px 20px;
+}
+#main-menu li:hover > ul li:hover ul {
+    left: 0;
+}
+.plan-tour {
+    padding-left: 0;
+    padding-top: 90px;
+    background: #FDFDFD;
+    border: 1px solid #F0F0F0;
+}
+.plan-banner {
+    width: 100%;
+} 
+.plan-banner > span,.plan-banner > h4 {
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    float: left;
+
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+.banner-overlay h1.text-upper {
+    font-size: 32px;
+}
+.input-field {
+    float: left;
+    width: 100%;
+} 
+.submit-btn input {
+    display: table;
+    float: none;
+    margin: 0 auto;
+    width: 50%;
+}
+.carousel .row > div {
+    float: left;
+    width: 50%;
+}
+.tl-author{
+    width: 100%;
+}
+.foot-box {
+    border: 1px solid #D5D5D5;
+    margin-bottom: -1px;
+    text-align: center;
+}
+.footer-social {
+    float: none;
+    width: auto;
+    display: inline-table;
+}
+#ft-footer{
+    background-size: cover;
+}
+.submit-btn {
+    padding: 10px;
+    float: left;
+    width: 100%;
+}
+#slider-overlay{
+    height: 0;
+}
+#main-slider{
+    height: auto;
+}
+#home-page {
+    margin-top: 50px;
+}
+aside#sidebar {
+    margin-top: 40px;
+}
+.sidebar-widget .nav-tabs > li {
+    text-align: center;
+    width: 33.334%;
+}
+.flickr-gal li{
+    text-align: center;
+}
+.flickr-gal li img {
+    display: inline-table;
+}
+.detail-plans-list li {
+    width: 50%;
+}
+.offer-box {
+    bottom: 0;
+    left: 0;
+    position: relative;
+    
+}
+.gallery-list li{
+    float: left;
+    width: 50%;
+}
+.pricing-table {
+    margin-bottom: 30px;
+    width: 50%;
+}
+.tables-container{
+    margin:0; 
+}
+.pricing-tables-2 {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.right-part,
+.contact-email,
+.contact-phone{
+    display: none;
+}
+.tp-bullets {
+    bottom: 20px !important;
+}
+.side-panel {
+    top: 200px;
+}
+
+
+}
+@media (max-width:767px){
+#site-logo {
+   display: table;
+    width: 55%;
+    margin: 0;
+}    
+#site-logo img {
+    width: 70%;
+    padding: 10px 0px;
+}
+.left-part, .right-part {
+    width: 300px;
+    text-align: center;
+    display: table;
+    margin: 0 auto;
+    float: none;
+}
+.left-part span,.right-part span {
+    width: 100%;
+    margin: 0 0 10px 0;
+    border: 0;
+}
+.left-part .social-media, .right-part form {
+    float: none;
+    display: table;
+    border: 0;
+    padding: 0;
+}
+.testimonials .desc{
+    width: 100%;
+}    
+.main-nav {
+    display: table;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 10000;
+    position: relative;
+}
+.main-nav span {
+    cursor: pointer;
+    height: 40px;
+    position: absolute;
+    top: -55px;
+    right: 0;
+    text-align: center;
+    display: block;
+    line-height: 36.1px;
+    font-size: 35.1px;
+    color: #fff;
+}
+.main-nav #main-menu {
+    left: 0;
+    position: absolute;
+    top: 100%;
+    display: none;
+}
+#main-menu li {
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+}
+#main-menu li a {
+    padding: 0 20px;
+}
+#main-menu li ul, #main-menu li ul li ul {
+    left: 0;
+    opacity: 1;
+    position: relative;
+    width: 100%;
+    display: none;
+}
+#main-menu li ul li a, #main-menu li ul li ul li a {
+    padding: 10px 20px;
+}
+#main-menu li:hover > ul li:hover ul {
+    left: 0;
+}
+.banner-overlay {
+    padding: 63px 0;
+}
+.banner-overlay h1.text-upper {
+    text-align: center;
+}
+.breadcrumb {
+    float: none;
+    text-align: center;
+}
+.container {
+    padding: 0 15px;
+}    
+.ft-heading{
+   font-size: 18px;
+}
+.ft-item{
+    position: relative;
+}
+.rating-stars{
+    bottom: 15px;
+}
+.ft-offer{
+    right: 0;
+    text-align: right;
+    padding-right: 10px;
+    bottom: 15px;
+}
+.plan-tour {
+    padding-left: 0;
+    padding-top: 90px;
+    background: #FDFDFD;
+    border: 1px solid #F0F0F0;
+}
+.plan-banner {
+    width: 100%;
+} 
+.plan-banner > span,.plan-banner > h4 {
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    float: left;
+
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+.input-field {
+    float: left;
+    width: 100%;
+} 
+.submit-btn input {
+    display: table;
+    float: none;
+    margin: 0 auto;
+    width: 50%;
+}
+.carousel .row > div {
+    float: left;
+    width: 50%;
+}
+.tl-author{
+    width: 100%;
+}
+.foot-box {
+    border: 1px solid #D5D5D5;
+    margin-bottom: -1px;
+    text-align: center;
+}
+.footer-social {
+    float: none;
+    width: auto;
+    display: inline-table;
+}
+#ft-footer{
+    background-size: cover;
+}
+.foot-boxs {
+    padding: 0 15px;
+}
+.submit-btn {
+    padding: 10px;
+    float: left;
+    width: 100%;
+}
+#slider-overlay{
+    height: 0;
+}
+#main-slider{
+    height: auto;
+}
+#home-page {
+    margin-top: 50px;
+}
+aside#sidebar {
+    margin-top: 40px;
+}
+.sidebar-widget .nav-tabs > li {
+    text-align: center;
+    width: 33.334%;
+}
+.flickr-gal li{
+    text-align: center;
+}
+.flickr-gal li img {
+    display: inline-table;
+}
+.plans-list li {
+    width: 50%;
+}
+.offer-box {
+    bottom: 0;
+    left: 0;
+    position: relative;
+    margin-bottom: 20px;
+}
+.gallery-list li{
+    float: left;
+    width: 100%;
+}
+.selected-deal, .booking-status {
+    border: 0 none;
+    float: left;
+    margin-bottom: 30px;
+    padding: 0;
+    width: 100%;
+}
+.pricing-table {
+    margin-bottom: 30px;
+    width: 100%;
+}
+.tables-container{
+    margin:0; 
+}
+.pricing-tables-2 {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.right-part,
+.contact-email,
+.contact-phone{
+    display: none;
+}
+.tp-bullets {
+    bottom: 20px !important;
+}
+.side-panel{
+    top: 300px;
+}
+    .box_style_1{
+     padding: 30px 10px;
+    }
+}
+
+@media (max-width:480px){
+.banner-overlay h1.text-upper {
+    font-size: 24px;
+}
+.carousel .row > div {
+    width: 100%;
+}    
+.about-author {
+    padding: 110px 20px 20px;
+}
+.author-image {
+    left: 50%;
+    margin-left: -35px;
+}
+.comment-body {
+    padding-left: 0;
+    padding-top: 80px;
+}
+.commenter-image {
+    left: 50%;
+    margin-left: -35px;
+}
+.single-ft-btm li.author-img{
+    top: 0;
+}
+.img-wt-border {
+    margin-top: 5px;
+    width: 50px;
+}
+.single-ft-btm{
+    padding-left:  80px;
+}
+.plans-list li {
+    width: 100%;
+}
+.error-page .error-text span {
+    font-size: 16px;
+}
+.error-page .error-text span.large-text {
+    font-size: 24px;
+}
+
+}
+

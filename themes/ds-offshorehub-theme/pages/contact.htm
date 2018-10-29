@@ -1,0 +1,60 @@
+title = "Contact"
+url = "/contact"
+layout = "default"
+is_hidden = 0
+
+[contactForm]
+==
+<!-- START #page-header -->
+<div id="header-banner">
+    <div class="banner-overlay">
+        <div class="container">
+            <div class="row">
+                <section class="col-sm-12">
+                    <h1 class="text-upper">Contact</h1>
+                    </section>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- START .main-contents -->
+<div class="main-contents">
+    <div class="container">
+        <div class="row">
+            <div id="page" class="col-md-8">
+                <section id="contactForm">
+                    <h2 class="ft-heading text-upper">If You need further details - Please write us</h2>
+                    <div id="scf-message-{{ contactForm }}">
+                        {% partial contactForm ~ '::scf-message' %}
+                    </div>
+
+                    <div id="scf-form-{{ contactForm }}">
+                        {% partial contactForm ~ '::scf-form' %}
+                    </div>
+
+                </section>
+
+
+            </div>
+
+            <!-- START #sidebar -->
+            <aside id="sidebar" class="col-md-4">
+                  <div class="sidebar-widget">
+                    <!-- Sidebar Contact info -->
+                    <div class="styled-box gray">
+                        <h3 class="text-upper">Contact Us</h3>
+                        <p>We're very approachable and would love to speak to you. Feel free to call, send us an email, Tweet us or simply complete the enquiry form.</p>
+                        <ul class="contact-info list-unstyled">
+                            <li class="ct-phone">+44 - 123 - 4567890</li>
+                            <li class="ct-email">info@travelhub.com</li>
+                            <li class="ct-facebook">www.facebook.com/travelhub</li>
+                            <li class="ct-twitter">#travelhub</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </aside>
+            <!-- END #sidebar -->
+        </div>
+    </div>
+</div>

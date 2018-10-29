@@ -1,0 +1,43 @@
+title = "post"
+url = "/post/:slug"
+layout = "default_sidebar"
+is_hidden = 0
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "blog/category"
+
+[comment]
+numposts = 5
+
+[blogRelated]
+slug = "{{ :slug }}"
+results = 5
+direction = "desc"
+postPage = "blog/post"
+==
+<?php
+function onEnd(){
+    $this->page->title = $this['post']->title;
+}
+?>
+==
+{% set post = blogPost.post %}
+    <h2 class="entry-title">
+       {{ this.page.title }}
+    </h2>
+
+    <!-- START .post-content -->
+    <article class="post-content">
+       {{ post.content_html|raw }}
+    </article>
+    <!-- END .post-content -->
+
+    <h2>Related posts</h2>
+<ul>
+    {% for Post in blogRelated.posts %}
+        <a href="{{Post.url}}"><li>{{ Post.title }}</li></a>
+    {% endfor %}
+</ul>
+
+    {% component 'comment' %}

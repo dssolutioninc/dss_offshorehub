@@ -1,0 +1,9 @@
+<h1>{{ faq.title }}</h1>
+<ul>
+{% for item in faq.questions %}
+    <li>
+    <h4>{{ item.question }}</h4>
+    <p>{{ item.answer|raw }}</p>
+    </li>
+{% endfor %}
+</ul>

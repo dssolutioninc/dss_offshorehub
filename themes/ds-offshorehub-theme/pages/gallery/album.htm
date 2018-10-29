@@ -1,0 +1,95 @@
+title = "Album"
+url = "/albums/:slug/:page?"
+layout = "default"
+is_hidden = 0
+
+[photoAlbum]
+slug = "{{ :slug }}"
+photoPage = 404
+thumbMode = "portrait"
+thumbWidth = 1200
+thumbHeight = 575
+photosOnPage = 12
+==
+{% set album = photoAlbum.album %}
+<!-- START #page-header -->
+<div id="header-banner">
+    <div class="banner-overlay">
+        <div class="container">
+            <div class="row">
+                <section class="col-sm-12">
+                    <h1 class="text-upper">{{ album.title }}</h1>
+                    </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- START .main-contents -->
+<div class="main-contents">
+    <div class="container">
+         <div class="row">
+             {% if album.description %}
+                <div class="album-description">
+                    {{ album.description|raw }}
+                </div>
+              {% endif %}
+            <!-- START 3 columns gallery -->
+            <ul class="gallery-list list-unstyled">
+               
+                {% for photo in album.photos %}
+                <li class="col-md-4">
+                    <div class="gal-item">
+                    <img class="img-responsive"
+                    data-src="{{ photo.thumb }}"
+                    src="{{ photo.thumb }}"
+                    alt="{{ photo.title }}"
+                    title="{{ photo.title }}"/>
+                        <a class="item-overlay" href="{{ photo.thumb }}">
+                            <img src="{{ 'assets/images/icons/gal-zoom-icon.png'|theme }}"/>
+                            <span class="item-text text-center">{{ photo.title }}</span>
+                        </a>
+                    </div>
+                </li>
+                 {% else %}
+                    <div class="col-xs-12 no-data">Album doesn't have any photos yet</div>
+                {% endfor %}
+            </ul>
+            <!-- END 3 columns gallery -->
+            {% if photoAlbum.lastPage > 1 %}
+            <ul class="pagination">
+                {% if photoAlbum.currentPage > 1 %}
+                <li><a href="{{ this.page.baseFileName|page }}?page={{ photoAlbum.currentPage-1 }}">&larr; Prev</a></li>
+                {% endif %}
+
+                {% for page in 1..photoAlbum.lastPage %}
+                <li class="{{ photoAlbum.currentPage == page ? 'active' : null }}">
+                    <a href="{{ this.page.baseFileName|page }}?page={{ page }}">{{ page }}</a>
+                </li>
+                {% endfor %}
+
+                {% if photoAlbum.lastPage > photoAlbum.currentPage %}
+                <li><a href="{{ this.page.baseFileName|page }}?page={{ photoAlbum.currentPage+1 }}">Next &rarr;</a></li>
+                {% endif %}
+            </ul>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+                $(document).ready(function() {
+			
+                        // initilize fancybox
+                        $(".item-overlay").fancybox({
+                                overlayShow: true,
+                                overlayOpacity: .7,
+                                overlayColor: "#000000", // background overlay color
+                                transitionIn: "fade", // transition type 'elastic', 'fade' or 'none'
+                                transitionOut: "fade",
+                                easingIn: "easeInCubic", // Easing used for elastic animations
+                                easingOut: "easeOutCubic",
+                                cyclic: true
+                        });
+                });
+</script>

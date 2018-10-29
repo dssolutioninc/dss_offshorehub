@@ -1,0 +1,6 @@
+plugin:
+    name: 'kenshin.contact::lang.plugin.name'
+    description: 'kenshin.contact::lang.plugin.description'
+    author: kenshin
+    icon: oc-icon-connectdevelop
+    homepage: ''

@@ -1,0 +1,43 @@
+title = "search"
+url = "/search"
+layout = "default"
+is_hidden = 0
+
+[searchResults]
+resultsPerPage = 10
+showProviderBadge = 1
+noResultsMessage = "Your search returned no results."
+visitPageMessage = "Visit page"
+==
+<!-- START #page-header -->
+<div id="header-banner">
+    <div class="banner-overlay">
+        <div class="container">
+            <div class="row">
+                <section class="col-md-12">
+                    <h1 class="text-upper">Search Result</h1>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END #page-header -->
+
+<!-- START .main-contents -->
+<div class="main-contents">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 tour-list">
+                <div class="row">
+                       {% component 'searchResults' %}
+                </div>
+            </div>
+            <!-- START #sidebar -->
+            <aside id="sidebar" class="col-md-4">
+                {% partial 'sidebar' %}
+            </aside>
+            <!-- END #sidebar -->
+        </div>
+    </div>
+</div>
+<!-- END .main-contents -->

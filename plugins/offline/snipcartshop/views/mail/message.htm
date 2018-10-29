@@ -1,0 +1,82 @@
+<p>
+    You got a new message from {{ name }} at {{ email }}
+
+</p>
+
+<table cellspacing="0" cellpadding="0" border="0" width="650px" style="font-family: tahoma; margin: 0 auto; border: 1px solid #ccc;">
+    <tr>
+        <td align="center">
+            <!-- This setup makes the nav background stretch the whole width of the screen. -->
+            <table width="650px" cellspacing="0" cellpadding="3" class="container">
+                <tr>
+                    <td style="background: #044767;">
+                        <h3 style="color: #fff; text-align: center; padding: 20px; margin: 0; font-size: 16px; text-transform: uppercase">{{ tour_name }}</h3>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td align="center">
+            <!-- This setup makes the nav background stretch the whole width of the screen. -->
+            <table width="650px" cellspacing="0" cellpadding="3" class="container">
+                <tr>
+                    <td style="background: #ccc; padding: 10px" width="70%">Invoice: {{ invoice_number }}</td>
+                    <td style="background: #ccc; padding: 10px; text-align:right" width="30%">{{ creation_date }}</td>
+                </tr>
+
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFFFFF" align="center">
+            <table width="650px" cellspacing="0" cellpadding="3">
+                <tr>
+                    <td style="padding: 10px;"><b>Khách hàng:</b> {{ name }}</td>
+                    <td style="padding: 10px;"><b>Mobile:</b> {{ mobile }}</td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding: 10px;"><b>Address:</b> {{ address }}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px;"><b>Email:</b> {{ email }}</td>
+                </tr>
+            </table>
+        </td>
+
+    </tr>
+    <tr>
+        <td bgcolor="#FFFFFF" align="center">
+            <table width="650px" cellspacing="0" cellpadding="3">
+                <td bgcolor="#ccc" style="padding: 10px;"> Order Infomation</td>
+            </table>
+        </td>
+    </tr>
+
+    <tr><td style="padding: 10px;"> <b>Tour Name:</b> {{ tour_name }}</td></tr>
+    <tr><td style="padding: 10px;"> <b>Start Date:</b> {{ date_from }}</td></tr>
+    <tr><td style="padding: 10px;"> <b>Audit:</b> {{ audit }} người</td></tr>
+    <tr><td style="padding: 10px;"> <b>Child 0 - 4 tuổi:</b> {{ childrenTiny }} người</td></tr>
+    <tr><td style="padding: 10px;"> <b>Child 4 - 5 tuổi:</b> {{ children }} người</td></tr>
+    <tr><td style="padding: 10px;"> <b>Child 6 - 9 tuổi:</b> {{ childrenHuge }} người</td></tr>
+    <tr><td style="padding: 10px;"> <b>Transport:</b> {{ transport }} - <b>Giá: </b> {{transportVal}}$</td></tr>
+    <tr><td style="padding: 10px;"> <b>Price:</b> {{ price }}$</td></tr>
+    <tr><td style="padding: 10px;"> <b>Total:</b> {{ sumprice }}$</td></tr>
+
+
+
+
+    <tr>
+        <td bgcolor="#FFFFFF" align="center">
+            <table width="650px" cellspacing="0" cellpadding="3" class="container">
+                <tr>
+                    <td>
+                        <hr>
+                        <p style="text-align: center">VIETNAMTRAVELVACATIONS.COM</p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>

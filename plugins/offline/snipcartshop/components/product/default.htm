@@ -1,0 +1,388 @@
+<!-- START #page-header -->
+<div id="header-banner">
+    <div class="banner-overlay">
+        <div class="container">
+            <div class="row">
+                <section class="col-sm-12">
+                    <h1 class="text-upper">{{ product.name }}</h1>
+                </section>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END #page-header -->
+
+<!-- START .main-contents -->
+<div class="main-contents">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="contact-notice"></div>
+            </div>
+            <div class="col-sm-8">
+                <div class="plan-tour-image">
+                    {% partial __SELF__ ~ '::image-grid.htm' images = product.additionalImages %}
+                    <div class="offer-box">
+                        <div class="offer-top">
+                            <span class="featured-cy text-upper">Starting From</span>
+                        </div>
+
+                        <div class="offer-bottom">
+                            <span class="featured-spe">{{ product.priceFormatted | raw }}</span>
+                            <input type="hidden" value="{{ product.getPriceInCurrency() }}" name="priceFormatted" id="priceCal"/>
+                        </div>
+                    </div>
+                </div>
+                <!-- START TABS -->
+                <ul class="nav nav-tabs text-upper">
+                    <li class="active">
+                        <a href="#tourPlan" data-toggle="tab">Tour Plan</a>
+                    </li>
+<!--                    <li>
+                        <a href="#flightSchedule" data-toggle="tab">Price List</a>
+                    </li>-->
+                    <li>
+                        <a href="#additionalInfo" data-toggle="tab">Additional Information</a>
+                    </li>
+                </ul>
+                <!-- END TABS -->
+
+                <!-- START TAB CONTENT -->
+                <div class="tab-content gray box-shadow1 clearfix marb30">
+                    <!-- START TAB 1 -->
+                    <div class="tab-pane active" id="tourPlan">
+                        <div class="panel-group" id="accordion">
+                            {% partial __SELF__ ~ '::plan-tour.htm' tour_schedule = product.tour_schedule %}
+                        </div>
+                    </div>
+                    <!-- END TAB 1 -->
+
+                    <!-- START TAB 2 -->
+<!--                    <div class="tab-pane" id="flightSchedule">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>FLIGHT FROM</th>
+                                        <th>DESTINATION</th>
+                                        <th>DATE</th>
+                                        <th>DEPARTS</th>
+                                        <th>ARRIVES</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="dark-gray">
+                                        <td>Seattle</td>
+                                        <td>Paris</td>
+                                        <td>20 DEC 2013</td>
+                                        <td>10:00</td>
+                                        <td>12:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Paris</td>
+                                        <td>Colosseum</td>
+                                        <td>21 DEC 2013</td>
+                                        <td>09:00</td>
+                                        <td>10:00</td>
+                                    </tr>
+                                    <tr class="dark-gray">
+                                        <td>Colosseum</td>
+                                        <td>London</td>
+                                        <td>22 DEC 2013</td>
+                                        <td>05:00</td>
+                                        <td>06:30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>London</td>
+                                        <td>Verona</td>
+                                        <td>23 DEC 2013</td>
+                                        <td>08:15</td>
+                                        <td>09:30</td>
+                                    </tr>
+                                    <tr class="dark-gray">
+                                        <td>Verona</td>
+                                        <td>Seattle</td>
+                                        <td>24 DEC 2013</td>
+                                        <td>10:00</td>
+                                        <td>03:40</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>-->
+                    <!-- END TAB 2 -->
+
+                    <!-- START TAB 3 -->
+                    <div class="tab-pane" id="additionalInfo">
+                        <div class="inside-pane">
+                            {{ product.description | raw }}
+                        </div>
+                    </div>
+                    <!-- END TAB 3 -->
+                </div>
+                <!-- END TAB CONTENT -->
+
+            </div>
+
+
+            <div class="col-sm-4">
+                <div class="box_style_1 expose">
+                    <h3 class="inner">- Booking -</h3>
+                    <form id="booking-form" novalidate>
+                        
+                            
+                            
+                           
+                            <div class="input-group">
+                                <input id="dateWhen" type="text" value="" class="form-control date-picker" name="formWhen" placeholder="From When?" data-date="12-12-2012" 
+                                       data-date-format="dd-mm-yyyy" required readonly>
+                                <span class="input-group-addon">
+                                    <i class="calendar-icon"></i>
+                                </span>
+                                
+                            </div>
+
+                       {% partial __SELF__ ~ '::custom-fields.htm' custom_fields = product.custom_fields %}
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                <div class="form-group">
+                                    <label class="booking-label">Adults</label>
+                                    <div class="numbers-row" data-min="1">
+                                        <input id="adults" class="form-control" type="number" name="adults" value="1" min="1" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                <div class="form-group">
+                                    <label class="booking-label">Free child < 4 year old</label>
+                                    <div class="numbers-row" data-min="0">
+                                        <input id="childrenTiny" class="form-control" type="number" name="childrenTiny" value="0" min="0" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+      
+                            <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                <div class="form-group">
+                                    <label class="booking-label">Child 4 - 5 year old</label>
+                                    <div class="numbers-row" data-min="0">
+                                        <input id="children" class="form-control" type="number" name="children" value="0" min="0" />
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                <div class="form-group">
+                                    <label class="booking-label">Child 6 - 9 year old</label>
+                                    <div class="numbers-row" data-min="0">
+                                        <input id="childrenHuge" class="form-control" type="number" name="childrenHuge" value="0" min="0" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      
+                            
+                        <br>
+                        <table class="table table_summary">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Adults </td>
+                                    <td class="text-right adults-number">
+                                        1
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td><i class="fa fa-child" aria-hidden="true"></i> < 4 year old </td>
+                                    <td class="text-right childrenTiny">
+                                        0
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td><i class="fa fa-child" aria-hidden="true"></i>  4 - 5 year old</td>
+                                    <td class="text-right children">
+                                        0
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td><i class="fa fa-child" aria-hidden="true"></i>  6 - 9 year old</td>
+                                    <td class="text-right childrenHuge">
+                                        0
+                                    </td>
+                                </tr>
+                                
+                           
+                                <tr class="total">
+                                    <td>
+                                        Total cost </td>
+                                    <td class="text-right total-cost">
+                                        {{ product.priceFormatted | raw }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                       <button type="button" class="btn_full book-now">Book now</button>
+                           
+                    </form>
+
+
+                
+            
+        </div>
+    </div>
+
+    {% if product.accessories.count %}
+    {% partial __SELF__ ~ '::accessories' accessories = product.accessories %}
+    {% endif %}
+    {% if product.is_accessory_of.count %}
+    {% partial __SELF__ ~ '::accessories' accessories = product.is_accessory_of %}
+    {% endif %}
+</div>
+
+
+</div>
+<!-- /container -->
+
+</div>
+<!-- END .main-contents -->
+
+<!-- Modal -->
+<div id="tourModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title text-upper">{{ product.name }}</h4>
+            </div>
+            <div class="modal-body">
+                <!-- START #contactForm -->
+                <section id="booking-form">
+                    <form id="configform" data-request="onSend" data-request-success="bookingTour();" data-request-error="alert('Something screwed up, in the meantime pls check again.')" >
+                        <div class="table-responsive">
+                            <input type="hidden" name="tourId" value="{{ product.id }}"/>
+                            <input type="hidden" name="tour_name" value="{{ product.name }}"/>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="text-center">Date From</th>
+                                        <th scope="col" class="text-center">Adults</th>
+                                        <th scope="col" class="text-center"><i class="fa fa-child" aria-hidden="true"></i> < 4 year old</th>
+                                        <th scope="col" class="text-center"><i class="fa fa-child" aria-hidden="true"></i>  4 - 5 year old</th>
+                                        <th scope="col" class="text-center"><i class="fa fa-child" aria-hidden="true"></i>  6 - 9 year old</th>
+                                        <th scope="col" class="text-center">Unit Price</th>
+                                        <th scope="col" class="text-center">Total Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center"><input type="text" readonly class="form-control" name ="date_from"  id="dateStart-booking" value=""/></td>
+                                        <td class="text-center"><input type="text" readonly class="form-control" name ="quantity"  id="quantity" value="1"/></td>
+                                        <td class="text-center"><input type="text" readonly class="form-control childrenTiny" name ="childrenTiny" value="0"/></td>
+                                        <td class="text-center"><input type="text" readonly class="form-control children" name ="children" value="0"/></td>
+                                        <td class="text-center"><input type="text" readonly class="form-control childrenHuge" name ="childrenHuge" value="0"/></td>
+                                        <td class="text-center">
+                                            <input type="text" readonly class="form-control" name ="display_price"  value="{{ product.getPriceInCurrency() }}"/>
+                                            <input type="hidden" name="price" value="{{ product.priceFormatted | raw }}"/>
+                                        </td>
+                                        <td class="text-center"><input readonly type="text" class="form-control" name ="total_price" value="{{ product.getPriceInCurrency() }}" id="total_booking" /></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <fieldset>
+                            <ul class="formFields list-unstyled">
+                                <li class="row">
+                                    <div class="col-md-6">
+                                        <label>Name <span class="required small">(Required)</span></label>
+                                        <input type="text" class="form-control" name="name" value="" required/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>Email <span class="required small">(Required)</span></label>
+                                        <input type="email" class="form-control" name="email" value="" required/>
+                                    </div>
+                                </li>
+                                <li class="row">
+                                    <div class="col-md-6">
+                                        <label>Address <span class="required small">(Required)</span></label>
+                                        <input type="text" class="form-control" name="address" value="" required/>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <label>Mobile <span class="required small">(Required)</span></label>
+                                        <input type="text" class="form-control" name="mobile" value="" required/>
+                                    </div>
+                                    
+                                </li>
+                                <li class="row">
+                                                                      
+                                    <div class="col-md-6">
+                                        <label>Method Pay <span class="required small">(Required)</span></label>
+                                        <input type="text" class="form-control" name="payment_method" value="" required/>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <label>Transport</label>
+                                        <input type="text" readonly class="form-control" name="transport" id="transport" value=""/>
+                                        <input type="hidden" class="form-control" name="transportVal" id="transportVal" value="0"/>
+                                    </div>
+                                    
+                                </li>
+                               
+
+                                <li class="row">
+                                    <div class="col-md-12">
+                                        <button type="submit" class="btn btn-primary btn-sm text-upper" data-attach-loading>Send</button>
+                                        <button type="button" class="btn btn-danger btn-sm text-upper" data-dismiss="modal">Close</button>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </fieldset>
+                    </form>
+                </section>
+                <!-- END #contactForm -->
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    function bookingTour(){
+        $('#tourModal').modal('hide');
+        $('#configform')[0].reset()
+       $html ='<div class="alert alert-success" role="alert">'
+       $html += '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>'
+       $html += '<strong>You have booked a successful tour!</strong> We will contact you as soon as possible. Thank you.'
+       $html += '</div>';
+       $('#contact-notice').append($html);
+       
+       $('html, body').animate({scrollTop: $('#contact-notice').offset().top -100 }, 'slow');
+       window.setTimeout(function() {
+            $(".alert").fadeTo(500, 0).slideUp(500, function(){
+                $(this).remove(); 
+            });
+        }, 5000);
+
+    }
+    $(window).load(function () {
+
+        // initilize datepicker
+        $(".date-picker").datepicker();
+
+        $('#adults').bootstrapNumber();
+        $('#childrenTiny').bootstrapNumber();
+        $('#children').bootstrapNumber();
+        $('#childrenHuge').bootstrapNumber();
+       
+    });
+</script>
+

@@ -1,0 +1,15 @@
+<div class="ft-item">
+    <span class="ft-image">
+        <a href="{{ __SELF__.productPage | page({slug: product.slug}) }}">
+            <img src="{{ product.image.thumb('auto', 'auto') }}" alt="{{ product.name }}" />
+        </a>
+    </span>
+    <div class="ft-foot">
+        <h4 class="ft-title">
+            <a href="{{ __SELF__.productPage | page({slug: product.slug}) }}">{{ product.name }}</a>
+        </h4>
+        <p>{{ product.description_short }}</p>
+        <div class="rating-stars s45"></div>
+        <span class="ft-offer">From {{ product.priceFormatted }}</span>
+    </div>
+</div>

@@ -1,0 +1,244 @@
+title = "home"
+url = "/"
+layout = "default"
+description = "Offshore consulting – Vietnam outsourcing marketplace"
+meta_title = "Offshore consulting – Vietnam outsourcing marketplace"
+meta_description = "Offshore consulting – Vietnam outsourcing marketplace"
+is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "blogs"
+postsPerPage = 6
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+
+[testimonials]
+
+[randomPhotos]
+photosCount = 8
+cacheLifetime = 0
+thumbMode = "auto"
+thumbWidth = 1200
+thumbHeight = 575
+photoPage = "blog/post"
+
+[faq]
+slug = "home-faqs"
+
+[blogPosts companiesList]
+pageNumber = "{{ :page }}"
+categoryFilter = "companies"
+postsPerPage = 6
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+==
+{% partial 'slider' %}
+
+<!-- START .main-contents -->
+<div class="main-contents">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-4 text-center core-item">
+                <div class="core-item-2">
+                    <span class="img-why-us img-why-us-mekong img-quality-guarantee hidden-xs hidden-sm"></span>
+                    <div class="core-item-content">
+                        <label class="text-highlight">信頼 & 品質</label>
+                        <div class="desc">
+                            信頼があることと品質を守る会社を紹介する                    <span class="icon icon-question-sign policy policy-3" data-target="#why_use_3" data-title="Quality Guarantee" data-placement="bottom" data-original-title="" title="" data-pop="1"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-4 core-item core-item-last">
+                <div class="core-item-3">
+                    <span class="img-why-us img-why-us-mekong img-24-7-support hidden-xs hidden-sm"></span>
+                    <div class="core-item-content">             
+                        <label class="text-highlight">納期期限厳守</label>
+                        <div class="desc">
+                            日本企業の期限を考える方を意識して、納期期限を厳守する                </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xs-12 col-sm-12 col-md-4 core-item">
+                <div class="core-item-1">
+                    <span class="img-why-us img-why-us-mekong img-best-price-guarantee hidden-xs hidden-sm"></span>
+                    <div class="core-item-content">
+                        <label class="text-highlight">開発費用削減</label>
+                        <div class="desc">
+                            国内委託より開発費用を削減することができます。        	    	<span data-target="#why_use_2" data-placement="bottom" data-title="Best price guarantee" class="policy policy-2 icon icon-question-sign" data-original-title="" title="" data-pop="1"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!-- END .main-contents -->
+
+<!-- START .main-contents -->
+<div class="main-contents bom-contents">
+    <div class="container">
+        <h2 class="ft-heading">企業<span>一覧</span> 
+            <p class="text-center ft-heading-short">ベトナムオフショア会社をご紹介</p>
+        </h2>
+        
+        <div class="row">
+        
+        {% set posts = companiesList.posts %}
+
+    {% for post in posts %}
+    <div class="col-md-4 col-sm-6 ">
+        <div class="product-list">
+                <div class="ft-item">
+                        <span class="ft-image">
+                            <a href="{{ post.url }}">
+                                    <img data-src="{{ post.featured_images[0].filename }}" src="{{ post.featured_images[0].path }}" alt="{{ post.featured_images[0].description }}">
+                            </a>
+                        </span>
+                        <div class="ft-foot">
+                            <h4 class="ft-title">
+                                <a href="{{ post.url }}">{{ post.title }}</a>
+                            </h4>
+                            <p class="info">
+                                    Posted
+                                    {% if post.categories.count %} in {% endif %}
+                                    {% for category in post.categories %}
+                                        <a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
+                                    {% endfor %}
+                                    on {{ post.published_at|date('M d, Y') }}
+                                </p>
+                                {{ html_limit(post.excerpt,150)|raw }}
+                        </div>
+                    </div>
+        </div>
+
+    </div>
+    {% else %}
+        <div class="no-data">{{ noPostsMessage }}</div>
+    {% endfor %}
+           
+        </div>
+    </div>
+</div>
+<!-- END .main-contents -->
+
+<!-- START .main-contents .bom-contents -->
+<div class="main-contents">
+    <div class="container">
+        <div class="row why-us">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                <h2 class="ft-heading ft-heading-left">なぜ <span>ベトナムオフショア開発?</span></h2>
+                <ul class="list-unstyled">
+                    <li><h4 class="text-highlight"><i class="fa fa-hand-o-right" aria-hidden="true"></i>人材豊富</h4></li>
+                    <li>IT分野の優秀人材がある</li>
+                    <li><h4 class="text-highlight"><i class="fa fa-hand-o-right" aria-hidden="true"></i>信頼＆品質</h4></li>
+                    <li>日本企業と付き合い期間長いため、信頼と品質を重視することを常に意思する</li>
+                    <li><h4 class="text-highlight"><i class="fa fa-hand-o-right" aria-hidden="true"></i>開発費用</h4></li>
+                    <li>案件種類によりであるが、国内委託より開発費用のとたるを30％〜50％までの削減できることを提案</li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                <h2 class="ft-heading ft-heading-left">FAQ<span>s</span></h2>
+                <div class="panel-group accordion-home" id="accordion">
+                {% for i, item in faq.questions %}
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <a class="panel-title collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse{{i}}">
+                                {{ item.question }}
+                            </a>
+                        </div>
+                        <div id="collapse{{i}}" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                {{ item.answer|raw }}
+                            </div>
+                        </div>
+                    </div>
+                
+                {% endfor %}
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END .main-contents .bom-contents -->
+
+<!-- START .main-contents .bom-contents -->
+<div class="main-contents black-contents">
+    <div class="container">
+      <h2 class="ft-heading">What our customers say  <span>about us</span></h2>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="testimonial">
+                    {% component 'testimonials' %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END .main-contents .bom-contents -->
+
+
+{% set posts = blogPosts.posts %}
+<div class="main-contents">
+    <div class="container">
+        <h2 class="ft-heading"><span>オフショア開発記事</span>
+            <p class="text-center ft-heading-short">実際経験された方からの記事</p>
+        </h2>
+        <div class="row">
+        {% for post in posts %}
+            <div class="col-md-4">
+                <div class="post-data">
+                    <div class="plan-image">
+                        {% if post.featured_images.count %}
+                        <a href="{{ post.url }}">
+                            <img class="img-responsive" data-src="{{ post.featured_images[0].filename }}" src="{{ post.featured_images[0].path }}" alt="{{ post.featured_images[0].description }}">
+                        </a>
+                        {% else %}
+                        <a href="{{ post.url }}">
+                                <img  src="{{'assets/images/no-image.png'|theme}}" alt="{{ post.title }}">
+                            </a>
+                    {% endif %}
+                    </div>
+                
+                    <div class="post-desc">
+                        <h4>
+                            <a href="{{ post.url }}">{{ post.title }}</a>
+                        </h4>
+                        {{ html_limit(post.content,200)|raw }}
+                    </div>
+                </div>
+            </div>
+     {% else %}
+        <div class="no-data">{{ noPostsMessage }}</div>
+    {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript ">
+    $(document).ready(function () {
+        // revolution slider
+        revapi = $("#content-slider ").revolution({
+            delay: 15000,
+            startwidth: 1170,
+            startheight: 450,
+            hideThumbs: 10,
+            fullWidth: "on ",
+            fullScreen: "off ",
+            fullScreenOffsetContainer: " ",
+            navigationVOffset: 40
+        });
+
+       });
+</script>

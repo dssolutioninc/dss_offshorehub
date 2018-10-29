@@ -1,0 +1,51 @@
+{% set testimonials =  __SELF__.testimonials %}
+<div class="testimonials owl-carousel owl-theme">
+    {% for testimonial in testimonials %}
+            <div class="item">
+               <div class="desc">{{ testimonial.content|raw }}</div>
+              <div class="author">
+                  <img class="author_img" src="{{testimonial.avatar.path}}"/>
+                  {% if testimonial.author %}
+                    <span>{{ testimonial.author }}</span>
+                  {% endif %}
+                  {% if testimonial.author_bio %}
+                    <span> - {{ testimonial.author_bio }}</span>
+                  {% endif %}
+                  {% if testimonial.date %}
+                    <p> {{ testimonial.date }}</p>
+                {% endif %}
+              </div>
+            </div>
+       {% endfor %}     
+          </div>
+<!--<div class="row">
+    {% for testimonial in testimonials %}
+        <div class="col-md-4">
+            <blockquote class="adjust2">
+                {{ testimonial.content|raw }}
+
+                {% if testimonial.author %}
+                    <small>{{ testimonial.author }}</small>
+                {% endif %}
+
+                {% if testimonial.date %}
+                    <small>{{ testimonial.date }}</small>
+                {% endif %}
+            </blockquote>
+        </div>
+    {% endfor %}
+</div>-->
+
+<script>
+            jQuery(document).ready(function($) {
+              $('.testimonials').owlCarousel({
+                animateOut: 'slideOutDown',
+                animateIn: 'flipInX',
+                items:1,
+                margin:30,
+                stagePadding:30,
+                smartSpeed:450
+              });
+              
+            });
+          </script>

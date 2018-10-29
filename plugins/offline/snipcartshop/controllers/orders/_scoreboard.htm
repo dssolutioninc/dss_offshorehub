@@ -1,0 +1,12 @@
+<div class="scoreboard-item title-value">
+    <h4><?= e(trans('offline.snipcartshop::lang.plugin.order.invoice_number')) ?></h4>
+    <p><?= e($order['invoice_number']) ?></p>
+    <p class="description"><?= e($order['creation_date_formatted']) ?></p>
+</div>
+
+<div class="scoreboard-item title-value">
+    <h4><?= e(trans('offline.snipcartshop::lang.plugin.order.grand_total')) ?></h4>
+    <p><?= e($order['grand_total_formatted']) ?></p>
+    <p class="description"><?= e(strtoupper($order['currency'])) ?></p>
+</div>
+

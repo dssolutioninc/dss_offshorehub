@@ -1,0 +1,9 @@
+<div class="sidebar-box">
+    <h4 class="sidebar-box__heading">CUSTOMER INFOMATION</h4>
+    <?php foreach ($order['items'] as $item): ?>
+    <div class="text-left"><b>Full Name:</b> <?= e($item['customer']) ?></div>
+        <div class="text-left"><b>Address:</b> <?= e($item['address']) ?></div>
+        <div class="text-left"><b>Mobile:</b> <?= e($item['mobile']) ?></div>
+        <div class="text-left"><b>Email: </b> <?= e($item['email']) ?></div>
+    <?php endforeach; ?>
+</div>

@@ -1,0 +1,78 @@
+title = "Category"
+url = "/albums"
+layout = "default"
+is_hidden = 0
+
+[albumList]
+albumPage = "gallery/album"
+thumbMode = "auto"
+thumbWidth = 640
+thumbHeight = 480
+albumsOnPage = 12
+==
+<!-- START #page-header -->
+<div id="header-banner">
+    <div class="banner-overlay">
+        <div class="container">
+            <div class="row">
+                <section class="col-sm-12">
+                    <h1 class="text-upper">Albums</h1>
+                </section>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END #page-header -->
+<div class="main-contents">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+               
+   <div class="albums-list row">
+    {% for album in albumList.albums %}
+        <div class="album-preview col-xs-12 col-sm-6 col-md-4 col-lg-6">
+            
+            <a href="{{ album.url }}">
+                <img
+                    data-src="{{ album.latestPhoto.thumb }}"
+                    src="{{ album.latestPhoto.thumb }}"
+                    style="width: 100%" />
+            </a>
+           <h3><a href="{{ album.url }}">{{ album.title }}</a></h3>
+        </div>
+    {% else %}
+        <h4 class="col-xs-12 no-data">You have not created any albums yet</h4>
+    {% endfor %}
+</div>
+
+{% if albumList.lastPage > 1 %}
+<ul class="pagination">
+    {% if albumList.currentPage > 1 %}
+    <li><a href="{{ this.page.baseFileName|page }}?page={{ albumList.currentPage-1 }}">&larr; Prev</a></li>
+    {% endif %}
+
+    {% for page in 1..albumList.lastPage %}
+    <li class="{{ albumList.currentPage == page ? 'active' : null }}">
+        <a href="{{ this.page.baseFileName|page }}?page={{ page }}">{{ page }}</a>
+    </li>
+    {% endfor %}
+
+    {% if albumList.lastPage > albumList.currentPage %}
+    <li><a href="{{ this.page.baseFileName|page }}?page={{ albumList.currentPage+1 }}">Next &rarr;</a></li>
+    {% endif %}
+</ul>
+{% endif %}
+
+
+            </div>
+            
+            <!-- START #sidebar -->
+            <aside id="sidebar" class="col-md-4">
+                {% partial 'sidebar' %}
+            </aside>
+            <!-- END #sidebar -->
+        </div>
+    </div>
+</div>

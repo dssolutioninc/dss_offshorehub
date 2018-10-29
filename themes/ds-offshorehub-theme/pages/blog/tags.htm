@@ -1,0 +1,75 @@
+title = "Tags"
+url = "/tags/:tag?"
+layout = "default"
+is_hidden = 0
+
+[blogTagSearch]
+tag = "{{ :tag }}"
+pagination = 1
+page = "{{ :page }}"
+resultsPerPage = 10
+postPage = "blog/post"
+categoryPage = "blog/tags"
+==
+<?php
+function onEnd() {
+if ($this->category)
+$this->page->title = $this->category->name;
+}
+?>
+==
+<article>
+
+    <div class="tg-titleborder">
+        <span>Search results for "{{ blogTagSearch.tag.name }}"</span>
+    </div>
+
+{% if blogTagSearch.posts %}
+    <ul>
+        {% for Post in blogTagSearch.tag.posts %}
+
+
+        <div class="entry-content">
+            <div class="row">
+                <div class="col-sm-3">
+                    {% if Post.featured_images.count %}
+                    <a href="{{ Post.url }}">
+                        <img data-src="{{ Post.featured_images[0].filename }}" src="{{ Post.featured_images[0].path }}" alt="{{ Post.featured_images[0].description }}">
+                    </a>
+                    {% else %}
+                    <a href="{{ Post.url }}">
+                        <img  src="{{'assets/images/no-image.png'|theme}}" alt="{{ Post.title }}">
+                    </a>
+                    {% endif %}
+                </div>
+                <div class="col-sm-8 excerpt">
+                    <h3 class="entry-title">
+                        <a href="{{ Post.url }}">{{ Post.title }}</a>
+                    </h3>
+                    {% if Post.categories %}
+                    - published in
+                    {% for category in Post.categories %}
+                    <a href="{{category.url|e}}">{{category.name}}</a>{% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                    {% endif %}
+
+                    <p>{{ html_limit(Post.content,200)|raw }}</p>
+                    <p class="moretag"><a href="{{ Post.url }}"> Read more</a></p>
+                </div>
+            </div>
+
+        </div>
+
+
+        {% endfor %}
+    </ul>
+{% else %}
+    No posts found.
+{% endif %}
+
+
+
+
+
+
+</article>

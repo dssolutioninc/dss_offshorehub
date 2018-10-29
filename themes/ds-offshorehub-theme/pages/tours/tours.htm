@@ -1,0 +1,59 @@
+title = "tours"
+url = "/tours/:slug"
+layout = "default"
+is_hidden = 0
+
+[products tours]
+categoryFilter = "slug"
+categorySlug = "{{ :slug }}"
+productsPerPage = 8
+noProductsMessage = "No Products found."
+sortOrder = "name asc"
+==
+<?php
+function onEnd() {
+if ($this->category)
+$this->page->title = $this->category->name;
+}
+?>
+==
+<!-- START #page-header -->
+<div id="header-banner">
+    <div class="banner-overlay">
+        <div class="container">
+            <div class="row">
+                <section class="col-md-12">
+                    <h1 class="text-upper">{{ this.page.title }}</h1>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END #page-header -->
+
+<!-- START .main-contents -->
+<div class="main-contents">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 tour-list">
+                <div class="row">
+                        {% for product in products %}
+                        <div class="col-sm-6 ">
+                            {% partial tours ~ '::product.htm' product = product %}
+                        </div>
+                        {% else %}
+                            {% partial tours ~ '::no-results.htm' %}
+                        {% endfor %}
+
+                        {% partial tours ~ '::pagination.htm' products = products %}
+                </div>
+            </div>
+            <!-- START #sidebar -->
+            <aside id="sidebar" class="col-md-4">
+                {% partial 'sidebar' %}
+            </aside>
+            <!-- END #sidebar -->
+        </div>
+    </div>
+</div>
+<!-- END .main-contents -->

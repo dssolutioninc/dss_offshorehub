@@ -1,0 +1,79 @@
+name: 'Main Menu'
+items:
+    -
+        title: ホーム
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: home
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: サービス
+        nesting: '0'
+        type: static-page
+        url: ''
+        code: ''
+        reference: services
+        cmsPage: ''
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 企業一覧
+        nesting: '0'
+        type: blog-category
+        url: ''
+        code: ''
+        reference: '8'
+        cmsPage: blog/category
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: オフショア開発記事
+        nesting: '0'
+        type: blog-category
+        code: ''
+        reference: '7'
+        cmsPage: blog/category
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 問い合わせ
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: contact
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 運用会社
+        nesting: '0'
+        type: static-page
+        url: ''
+        code: ''
+        reference: about-us
+        cmsPage: ''
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'

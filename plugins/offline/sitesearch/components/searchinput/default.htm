@@ -1,0 +1,20 @@
+<div class="sidebar-widget">
+    <!-- Sidebar Search -->
+    <div class="styled-box gray">
+        <h3 class="text-upper">Search</h3>
+        <form action="{{ __SELF__.searchPage | page }}?q={{ query | url_encode(true) }}" method="get">
+            <input name="q" type="text" placeholder="Enter keyword for search" autocomplete="off" class="form-control input-style1 marb20"
+                            {% if __SELF__.useAutoComplete %}
+                        data-track-input
+                        data-request="{{ __SELF__ }}::onType"
+                        data-request-before-update="document.getElementById('autocomplete-results').classList.add('ss-search-form__results--visible')"
+                        data-request-update="'{{ __SELF__ }}::autocomplete': '#autocomplete-results'"
+                    {% endif %}                            
+                            
+                            />
+                            <button class="ss-search-form__submit btn btn-primary text-upper marb20" type="submit">Search</button>
+                            <!--<button type="submit" name="submit" class="btn btn-primary text-upper marb20" value="Search">Search</button>-->
+            <div class="ss-search-form__results" id="autocomplete-results"></div>
+        </form>
+    </div>
+</div>

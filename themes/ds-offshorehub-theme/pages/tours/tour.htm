@@ -1,0 +1,10 @@
+title = "tour"
+url = "/tour/:slug"
+layout = "default"
+is_hidden = 0
+
+[product tourDetail]
+productSlug = "{{ :slug }}"
+productPage = "tours/tour"
+==
+{% component 'tourDetail' %}

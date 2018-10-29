@@ -1,0 +1,92 @@
+description = "Default layout"
+==
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<!-- START head -->
+
+<head>
+    <!-- Site meta charset -->
+    <meta charset="UTF-8">
+
+    <!-- title -->
+    <title>Offshore consulting – Vietnam outsourcing marketplace</title>
+
+    <!-- meta description -->
+    <meta name="description" content="YOUR META DESCRIPTION GOES HERE" />
+
+    <!-- meta keywords -->
+    <meta name="keywords" content="YOUR META KEYWORDS GOES HERE" />
+
+    <!-- meta viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <!-- favicon -->
+    <!-- <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}""> -->
+    <!-- bootstrap 3 stylesheets -->
+    <link rel="stylesheet" type="text/css" href="{{'assets/vendor/bs3/css/bootstrap.css'|theme }}" media=" all " />
+	<!-- template stylesheet -->
+	<link rel="stylesheet " type="text/css " href="{{ 'assets/css/styles.css'|theme }}" media="all" />
+
+    <link rel="stylesheet" href="{{'assets/css/flexslider.css'|theme }}" type=" text/css " media="screen " />
+	<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+	<link rel="stylesheet " type="text/css " href="{{ 'assets/vendor/rs-plugin/css/settings.css'|theme }}" media="all" />
+    <!-- responsive stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{{'assets/css/responsive.css'|theme }}" media=" all " />
+    <link rel="stylesheet" type="text/css" href="{{'assets/css/font-awesome.css'|theme }}" media=" all " />
+	<!-- Load Fonts via Google Fonts API -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&amp;subset=vietnamese" rel="stylesheet "/>
+	<!-- javascripts -->
+	<script type="text/javascript " src="{{ 'assets/js/modernizr.custom.17475.js'|theme }}"></script>
+
+	<script type="text/javascript " src="{{ 'assets/js/jquery.min.js'|theme }}"></script>
+	<script type="text/javascript " src="{{ 'assets/vendor/bs3/js/bootstrap.min.js'|theme }}"></script>
+	<script type="text/javascript " src="{{ 'assets/js/bootstrap-datepicker.js'|theme }}"></script>
+        <script type="text/javascript " src="{{ 'assets/js/bootstrap-number-input.js'|theme }}"></script>
+	<script src="{{ 'assets/js/jquery.flexslider-min.js'|theme }}"></script>
+	<script src="{{ 'assets/js/script.js'|theme }}"></script>
+
+	<!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+	<script type="text/javascript " src="{{ 'assets/vendor/rs-plugin/js/jquery.plugins.min.js'|theme }}"></script>
+	<script type="text/javascript " src="{{ 'assets/vendor/rs-plugin/js/jquery.revolution.min.js'|theme }}"></script>
+
+	<!--[if lt IE 9]>
+			<script type="text/javascript " src="{{ 'assets/js/html5shiv.js'|theme }}"></script>
+		<![endif]-->
+
+	{% scripts %}
+
+</head>
+<!-- END head -->
+
+<!-- START body -->
+
+<body>
+    <!-- START #wrapper -->
+    <div id="wrapper">
+        <!-- Header -->
+        {% partial 'header' %}
+
+        <!-- Content -->
+        <div class="container">
+            <div class="row">
+                <!-- START #page -->
+                <div id="page" class="col-md-8">
+                    {% page %}
+                </div>
+                <!-- START #sidebar -->
+                <aside id="sidebar" class="col-md-4 sidebar-cat">
+                    {% partial 'sidebar' %}
+                </aside>
+            </div>
+        </div>
+        <!-- Footer -->
+        {% partial 'footer' %}
+    </div>
+    <!-- END #wrapper -->
+
+    {% framework extras %}
+    {% scripts %}
+</body>
+
+</html>

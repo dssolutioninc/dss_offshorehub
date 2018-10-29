@@ -1,0 +1,74 @@
+title = "Blog"
+url = "/blog/:page?"
+layout = "default"
+is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+==
+<article>
+    <div class="tg-titleborder">
+        <span>{{ this.page.title }}</span>
+    </div>
+{% set posts = blogPosts.posts %}
+    {% for post in posts %}
+    <div class="entry-content">
+        <div class="row">
+            <div class="col-sm-3">
+                {% if post.featured_images.count %}
+                <a href="{{ post.url }}">
+                    <img data-src="{{ post.featured_images[0].filename }}" src="{{ post.featured_images[0].path }}" alt="{{ post.featured_images[0].description }}">
+                </a>
+                {% else %}
+                <a href="{{ post.url }}">
+                    <img  src="{{'assets/images/no-image.png'|theme}}" alt="{{ post.title }}">
+                </a>
+                {% endif %}
+            </div>
+            <div class="col-sm-8 excerpt">
+                <h3 class="entry-title">
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                </h3>
+
+                <p class="info">
+                    Posted {% if post.categories.count %} in {% endif %}
+                    {% for category in post.categories %}
+                    <a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                </p>
+                <p>{{ html_limit(post.content,170)|raw }}</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    {% else %}
+        <div class="no-data">{{ noPostsMessage }}</div>
+    {% endfor %}
+
+
+    <!--Paging-->
+    {% if posts.lastPage > 1 %}
+    <ul class="pagination">
+        {% if posts.currentPage > 1 %}
+        <li class="page-item"><a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage-1) }) }}">&larr; Prev</a></li>
+        {% endif %}
+
+        {% for page in 1..posts.lastPage %}
+        <li class="page-item {{ posts.currentPage == page ? 'active' : null }}">
+            <a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+        </li>
+        {% endfor %}
+
+        {% if posts.lastPage > posts.currentPage %}
+        <li class="page-item"><a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage+1) }) }}">Next &rarr;</a></li>
+        {% endif %}
+    </ul>
+    {% endif %}
+</article>

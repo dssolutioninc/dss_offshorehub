@@ -1,0 +1,86 @@
+[viewBag]
+
+[staticMenu]
+code = "main-menu"
+
+[searchInput]
+useAutoComplete = 0
+autoCompleteResultCount = 5
+showProviderBadge = 0
+searchPage = "search.htm"
+==
+<!-- START header -->
+<header>
+    <!-- START #top-header -->
+    <div id="top-header">
+        <div class="container">
+            <div class="row top-row">
+                <div class="col-md-6">
+                    <div class="left-part alignleft">
+                        <span class="contact-email small">info@devsamurai.com</span>
+                        
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="right-part alignright">
+                        <form action="{{ searchInput.searchPage | page }}?q={{ query | url_encode(true) }}" method="get">
+                            <fieldset class="alignright">
+                            
+                                              
+                                <input name="q" type="text" placeholder="search" autocomplete="off" class="search-input"/>
+                                <input type="submit" class="search-submit ss-search-form__submit" value="" />
+                            </fieldset>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END #top-header -->
+
+    <!-- START #main-header -->
+    <div id="main-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <a id="site-logo" href="/">
+                        <img src="{{ 'assets/images/logo.png'|theme }}" alt="Travel Viet Nam" />
+                    </a>
+                </div>
+                <div class="col-md-9">
+                    <nav class="main-nav">
+                        <span><i class="fa fa-bars" aria-hidden="true"></i></span>
+                        
+                        {% if staticMenu.menuItems %}
+                            <ul id="main-menu">
+                                {% for item in staticMenu.menuItems if not item.viewBag.isHidden %}
+                                    <li role="presentation" class="{{ item.isActive ? 'active' : '' }} {{ item.isChildActive ? 'child-active' : '' }} {{ item.viewBag.cssClass }}">
+                                        {% if item.url %}
+                                            <a href="{{ item.url }}" {{ item.viewBag.isExternal ? 'target="_blank"' }}>
+                                                {{ item.title }}
+                                            </a>
+                                        {% else %}
+                                            <span>{{ item.title }}</span>
+                                        {% endif %}
+                                         {% if item.items %}
+                                            <ul>
+                                                {% for itemSub in item.items%}
+                                                <li>
+                                                    <a href="{{itemSub.url}}" title="">{{itemSub.title}}</a>
+                                                </li>
+                                                 {% endfor %}
+                                            </ul>
+                                        {% endif %}
+                                    </li>
+                                {% endfor %}
+                             </ul>
+                        {% endif %}
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END #main-header -->
+</header>
+<!-- END header -->

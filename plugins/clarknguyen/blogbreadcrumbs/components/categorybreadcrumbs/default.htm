@@ -1,0 +1,13 @@
+<section class="col-sm-6">
+    <ol class="breadcrumb">
+        {% for breadcrumb in breadCrumbs %}
+        {% if breadcrumb.separator %}
+            <li class="home">{{ breadcrumb.separator }}</li>
+        {% elseif breadcrumb.link == '#' %}
+            <li class="active">{{ breadcrumb.name }}</li>
+        {% else %}
+            <li><a href="{{ breadcrumb.link }}">{{ breadcrumb.name }}</a></li>
+        {% endif %}
+        {% endfor %}
+    </ol>
+</section>
