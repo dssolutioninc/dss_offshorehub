@@ -6,5 +6,6 @@ bower_components
 
 #others
 .DS_Store
+.htaccess
 config
 info.php
