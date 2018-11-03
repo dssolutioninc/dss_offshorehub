@@ -1,0 +1,41 @@
+[viewBag]
+
+[slideshow]
+slideshow = 2
+numberOfSlide = 5
+==
+
+<!-- START #main-slider -->
+<div id="main-slider">
+    <div id="content-slider">
+        {% if slideshow.slideshow.slides %}
+        <ul>
+            {% for i, slide in slideshow.slideshow.slides %}
+            <li data-transition="fade" data-slotamount="5" data-masterspeed="700">
+                <img src="{{ slide.image.path }}" alt="{{ slide.image.title }}" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat"
+                />
+                {% if slide.name %}
+                <!-- LAYER NR. 1 -->
+                <div class="caption caption-yellow sft stt headline text-upper" data-x="20" data-y="228" data-speed="600" data-start="2000"
+                    data-easing="Power3.easeOut" data-endspeed="400" data-endeasing="Power4.easeIn" data-captionhidden="off"
+                    style="z-index:6;font-size:18px;">{{ slide.name }}
+                </div>
+                {% endif %}
+              
+                <!-- LAYER NR. 3 -->
+                {% if slide.description %}
+                <div class="caption caption-black sfb stb headline text-upper" data-x="20" data-y="263" data-speed="600" data-start="1500"
+                    data-easing="Power4.easeOut" data-endspeed="500" data-endeasing="Power1.easeIn" data-captionhidden="off"
+                    style="z-index:6">
+                    {{ slide.description|raw }}
+                </div>
+                {% endif %}
+            </li>
+                      
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+    <!--<div id="slider-overlay"></div>-->
+</div>
+<!-- END #main-slider -->
