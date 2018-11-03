@@ -84,6 +84,20 @@ postPage = "blog/post"
 </div>
 <!-- END .main-contents -->
 
+<!-- TAM TEST START .main-contents -->
+<div class="main-contents">
+    <div class="container">
+        <h2 class="ft-heading">利用流れ</h2>
+        <div class="row">
+            <center>
+                <img src="/themes/ds-offshorehub-theme/assets/images/offshorehub_flow.png" alt="offshorehub flow"/>
+            </center>
+        </div>
+    </div>
+</div>
+<!-- END .main-contents -->
+
+
 <!-- START .main-contents -->
 <div class="main-contents bom-contents">
     <div class="container">
@@ -98,7 +112,7 @@ postPage = "blog/post"
     {% for post in posts %}
     <div class="col-md-4 col-sm-6 ">
         <div class="product-list">
-                <div class="ft-item">
+                <div class="ft-item" style="height:400px;">
                         <span class="ft-image">
                             <a href="{{ post.url }}">
                                     <img data-src="{{ post.featured_images[0].filename }}" src="{{ post.featured_images[0].path }}" alt="{{ post.featured_images[0].description }}">
@@ -197,7 +211,7 @@ postPage = "blog/post"
         <div class="row">
         {% for post in posts %}
             <div class="col-md-4">
-                <div class="post-data">
+                <div class="post-data" style="height:400px;">
                     <div class="plan-image">
                         {% if post.featured_images.count %}
                         <a href="{{ post.url }}">
@@ -214,7 +228,7 @@ postPage = "blog/post"
                         <h4>
                             <a href="{{ post.url }}">{{ post.title }}</a>
                         </h4>
-                        {{ html_limit(post.content,200)|raw }}
+                        {{ html_limit(post.excerpt,200)|raw }}
                     </div>
                 </div>
             </div>

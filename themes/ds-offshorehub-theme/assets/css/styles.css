@@ -505,7 +505,7 @@ blockquote strong {font-size:16px;}
 }
 .plan-image img {
     width: 100%;
-    max-height: 170px;
+    height: 170px;
     -webkit-transition: all 0.4s ease 0s;
     -moz-transition: all 0.4s ease 0s;
     -ms-transition: all 0.4s ease 0s;
