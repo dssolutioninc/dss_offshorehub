@@ -37,7 +37,23 @@ sortOrder = "published_at desc"
 categoryPage = "blog/category"
 postPage = "blog/post"
 ==
-{% partial 'slider' %}
+<div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12" style="position:relative;">
+                <img style="position:absolute; z-index:1; top: 0px; left: 0px; display:block; width:100%;" src="/storage/app/media/offshore-hub-banner-01.png">
+                <br/><br/>
+                <a href="/contact">
+                <img style="position:absolute; z-index:1; top:0px; padding-top:25%; left:15%; width:25%;" src="/storage/app/media/contact_blue2.png">
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <img style="display:block; width:100%;visibility:hidden;" src="/storage/app/media/offshore-hub-banner-01.png">
+            </div>
+        </div>
+    </div>
+
 
 <!-- START .main-contents -->
 <div class="main-contents">
