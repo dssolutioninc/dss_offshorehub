@@ -37,22 +37,43 @@ sortOrder = "published_at desc"
 categoryPage = "blog/category"
 postPage = "blog/post"
 ==
+<style type="text/css">
+    .offshore-model{
+        background: #2f4357;
+        padding-bottom:0px;
+    }
+    .carousel{
+        background: #2f4357;
+        padding: 30px;
+    }
+    .carousel .item{
+        
+    }
+    .carousel .item img{
+        display:block;
+        max-height: 400px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+</style>
+
+
 <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12" style="position:relative;">
-                <img style="position:absolute; z-index:1; top: 0px; left: 0px; display:block; width:100%;" src="/storage/app/media/offshore-hub-banner-01.png">
-                <br/><br/>
-                <a href="/contact">
-                <img style="position:absolute; z-index:1; top:0px; padding-top:25%; left:15%; width:25%;" src="/storage/app/media/contact_blue2.png">
-                </a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <img style="display:block; width:100%;visibility:hidden;" src="/storage/app/media/offshore-hub-banner-01.png">
-            </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12" style="position:relative;">
+            <img style="position:absolute; z-index:1; top: 0px; left: 0px; display:block; width:100%;" src="/storage/app/media/OH_banner.png">
+            <br/><br/>
+            <a href="/contact">
+            <img style="position:absolute; z-index:1; top:0px; padding-top:25%; left:15%; width:25%;" src="/storage/app/media/contact_blue2_dark.png" onmouseover="this.src='/storage/app/media/contact_blue2.png';" onmouseout="this.src='/storage/app/media/contact_blue2_dark.png';">
+            </a>
         </div>
     </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <img style="display:block; width:100%;visibility:hidden;" src="/storage/app/media/OH_banner.png">
+        </div>
+    </div>
+</div>
 
 
 <!-- START .main-contents -->
@@ -106,7 +127,7 @@ postPage = "blog/post"
         <h2 class="ft-heading">オフショアハブの<span>利用流れ</span></h2>
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-6" style="padding-bottom:50px">
-                <img style="display:block; width:70%;margin-left:auto;margin-right:auto;" src="/storage/app/media/offshore-macching-01.png">
+                <img style="display:block; width:70%;margin-left:auto;margin-right:auto;" src="/storage/app/media/offshore-matching-01.png">
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6" style="">
                 <img style="width:100%;margin-left:auto;margin-right:auto;" src="/storage/app/media/offshore-development-approach-process-02.png">
@@ -219,38 +240,41 @@ postPage = "blog/post"
 </div>
 <!-- END .main-contents .bom-contents -->
 
-<div class="main-contents black-contents">
+<div class="main-contents black-contents offshore-model">
     <div class="container-fluid">
         <h2 class="ft-heading">オフショア開発の<span>適切モデル</span></h2>
+        
         <div class="row">
-            <div class="col-xs-12 col-sm-4 col-md-4" style="padding-bottom:50px;">
-                <img style="display:block; width:90%;margin-left:auto;margin-right:auto;"  src="/storage/app/media/offshore-bse.png">
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-4" style="padding-bottom:50px;border-left:1px solid white; border-right:1px solid white;">
-                <img style="display:block; width:90%;margin-left:auto;margin-right:auto;" src="/storage/app/media/offshore-onsite-bse.png">
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-4" style="padding-bottom:30px;">
-                <img style="display:block; width:90%;margin-left:auto;margin-right:auto;" src="/storage/app/media/offshore-customer.png">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Carousel indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>   
+                <!-- Wrapper for carousel items -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="/storage/app/media/offshore-bse.png" alt="First Slide">
+                    </div>
+                    <div class="item">
+                        <img src="/storage/app/media/offshore-onsite-bse.png" alt="Second Slide">
+                    </div>
+                    <div class="item">
+                        <img src="/storage/app/media/offshore-customer.png" alt="Third Slide">
+                    </div>
+                </div>
+                <!-- Carousel controls -->
+                <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
             </div>
         </div>
     </div>
 </div>
-
-
-<!-- START .main-contents .bom-contents -->
-<!-- <div class="main-contents black-contents">
-    <div class="container">
-      <h2 class="ft-heading">オフショア開発の適切モデルの<span>ご選定</span></h2>
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="testimonial">
-                    {% component 'testimonials' %}
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
-<!-- END .main-contents .bom-contents -->
 
 
 {% set posts = blogPosts.posts %}
