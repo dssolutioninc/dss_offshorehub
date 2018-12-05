@@ -2,10 +2,11 @@ title = "Contact"
 url = "/contact"
 layout = "default"
 is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
 
 [contactForm]
 ==
-<!-- START #page-header -->
 <div id="header-banner">
     <div class="banner-overlay">
         <div class="container">
@@ -23,17 +24,6 @@ is_hidden = 0
         <div class="row">
             <div id="page" class="col-md-8">
             
-                <div class="main-contents black-contents">
-                    <div class="container-fluid">
-                        <h2 class="ft-heading">利用流れ</span></h2>
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12" style="">
-                                <img style="display:block;width:90%;margin-left:auto;margin-right:auto;" src="/storage/app/media/offshore-development-approach-process-02.png">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <section id="contactForm">
                     <div id="scf-message-{{ contactForm }}">
                         {% partial contactForm ~ '::scf-message' %}
@@ -44,24 +34,24 @@ is_hidden = 0
                     </div>
 
                 </section>
-
-
+                
             </div>
 
             <!-- START #sidebar -->
             <aside id="sidebar" class="col-md-4">
                   <div class="sidebar-widget">
                     <!-- Sidebar Contact info -->
-                    <div class="styled-box gray">
-                        <h3 class="text-upper">連絡先</h3>
-                        <span class="glyphicon glyphicon-asterisk"></span><p class="alert alert-primary">オフショア開発やベトナムのプロバイダーの活用を検討してる方。</p>
-                        <p class="alert alert-primary">オフショア開発は未経験で不安のことがある方</p>
-                        <p class="alert alert-primary">信頼や品質、納期などについて心配する方。</p>
-                        <p class="alert alert-primary">ベトナムオフショア開発企業一括見積もり、比較したい。</p>
-
+                    <div class="styled-box gray" alilgn="center">
+                        <img style="display:block;width:100%;margin-left:auto;margin-right:auto;" src="/storage/app/media/contact2.png">
+                        
+                        <ul class="list-style list-style4 list-style-box">
+                            <li>オフショア開発やベトナムのプロバイダーの活用を検討してる方</li>
+                            <li>オフショア開発は未経験で不安のことがある方</li>
+                            <li>信頼や品質、納期などについて心配する方</li>
+                        </ul>
                         <h4>お気にする点がございましたら、気軽にオフショアハブまでお問い合わせてください。</h4>
                         <ul class="contact-info list-unstyled">
-                            <li class="ct-phone">03-5926-4420</li>
+                            <li class="ct-phone">050-3627-8910</li>
                             <li class="ct-email">info@offshorehub.jp</li>
                             <li class="ct-facebook">www.facebook.com/offshorehub</li>
                         </ul>

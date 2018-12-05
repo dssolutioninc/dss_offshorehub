@@ -15,13 +15,13 @@ searchPage = "search.htm"
     <div id="top-header">
         <div class="container">
             <div class="row top-row">
-                <div class="col-md-6">
+                <div class="col-xs-12 col-sm-6 col-md-6">
                     <div class="left-part alignleft">
                         <span class="contact-email small"><a href="mailto:info@offshorehub.jp"><span style="color: red; font-weight: bold;">info@offshorehub.jp</span></a></span>
-                        <span class="contact-phone small">電話でお問い合わせはこちらまで <span style="color: red; font-weight: bold;">03-5926-4420</span></span>
+                        <span class="contact-phone small">電話でお問い合わせはこちらまで <span style="color: red; font-weight: bold;">050-3627-8910</span></span>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-xs-12 col-sm-6 col-md-6">
                     <div class="right-part alignright">
                         <form action="{{ searchInput.searchPage | page }}?q={{ query | url_encode(true) }}" method="get">
                             <fieldset class="alignright">
@@ -45,13 +45,12 @@ searchPage = "search.htm"
             <div class="row">
                 <div class="col-sx-6 col-md-4">
                     <a id="site-logo" href="/">
-                        <img src="{{ 'assets/images/offshore-development-logo.png'|theme }}" alt="Vietnam offshore software development service - ベトナムオフショアソフトウェア開発サービス" />
+                        <img src="{{ 'assets/images/OH_logo2.png'|theme }}" alt="Vietnam offshore software development service - ベトナムオフショアソフトウェア開発サービス" />
                     </a>
                 </div>
                 <div class="col-sx-6 col-md-8">
                     <nav class="main-nav">
                         <span><i class="fa fa-bars" aria-hidden="true"></i></span>
-                        
                         {% if staticMenu.menuItems %}
                             <ul id="main-menu">
                                 {% for item in staticMenu.menuItems if not item.viewBag.isHidden %}

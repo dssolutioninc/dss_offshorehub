@@ -1,10 +1,14 @@
 title = "home"
 url = "/"
 layout = "default"
-description = "Offshore consulting – Vietnam outsourcing marketplace"
-meta_title = "Offshore consulting – Vietnam outsourcing marketplace"
-meta_description = "Offshore consulting – Vietnam outsourcing marketplace"
+description = "ベトナムオフショア開発"
+meta_title = "ベトナムオフショア開発"
+meta_description = "DevSamurai株式会社のオフショア開発サービスです。ベトナムオフショア開発を検討しているならご連絡下さい。
+ベトナムオフショア開発ならOffshoreHub"
 is_hidden = 0
+seo_keywords = "ベトナムオフショア開発"
+robot_index = "index"
+robot_follow = "follow"
 
 [blogPosts]
 pageNumber = "{{ :page }}"
@@ -36,81 +40,59 @@ noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
 categoryPage = "blog/category"
 postPage = "blog/post"
+
+[SeoCmsPage]
 ==
-<style type="text/css">
-    .offshore-model{
-        background: #2f4357;
-        padding-bottom:0px;
-    }
-    .carousel{
-        background: #2f4357;
-        padding: 30px;
-    }
-    .carousel .item{
-        
-    }
-    .carousel .item img{
-        display:block;
-        max-height: 400px;
-        margin-left:auto;
-        margin-right:auto;
-    }
-</style>
-
-
+<!-- <div class="container-fluid"> -->
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12" style="position:relative;">
-            <img style="position:absolute; z-index:1; top: 0px; left: 0px; display:block; width:100%;" src="/storage/app/media/OH_banner.png">
-            <br/><br/>
+    <div class="row" style="margin:0px;">
+        <div class="col-xs-12 col-sm-12 col-md-12" style="padding:0px; position:relative;">
+            <img class="img-responsive" style="width:100%;" src="/storage/app/media/OH-banner1.png">
+            <div style="position:absolute; z-index:1; top:0px; padding-top:25%; left:17%; width:20%;" >
             <a href="/contact">
-            <img style="position:absolute; z-index:1; top:0px; padding-top:25%; left:15%; width:25%;" src="/storage/app/media/contact_blue2_dark.png" onmouseover="this.src='/storage/app/media/contact_blue2.png';" onmouseout="this.src='/storage/app/media/contact_blue2_dark.png';">
+            <img style="width:100%;" src="/storage/app/media/contact_blue2_dark.png" onmouseover="this.src='/storage/app/media/contact_blue2.png';" onmouseout="this.src='/storage/app/media/contact_blue2_dark.png';">
             </a>
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <img style="display:block; width:100%;visibility:hidden;" src="/storage/app/media/OH_banner.png">
-        </div>
-    </div>
-</div>
-
+</div> 
 
 <!-- START .main-contents -->
 <div class="main-contents">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-4 text-center core-item">
-                <div class="core-item-2">
-                    <span class="img-why-us img-why-us-mekong img-quality-guarantee hidden-xs hidden-sm"></span>
-                    <div class="core-item-content">
+                <div class="core-item-1">
+                    <img align="left" style="width:20%;margin-left:auto;margin-right:auto;" src="/storage/app/media/quality.png">
+                    <div class="core-item-content" style="width:80%;">
                         <label class="text-highlight">信頼 & 品質</label>
                         <div class="desc">
-                            信頼があることと品質を守る会社を紹介する                    <span class="icon icon-question-sign policy policy-3" data-target="#why_use_3" data-title="Quality Guarantee" data-placement="bottom" data-original-title="" title="" data-pop="1"></span>
+                            信頼があることと品質を守る会社を紹介する     
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-xs-12 col-sm-12 col-md-4 core-item core-item-last">
-                <div class="core-item-3">
-                    <span class="img-why-us img-why-us-mekong img-24-7-support hidden-xs hidden-sm"></span>
-                    <div class="core-item-content">             
+            <div class="col-xs-12 col-sm-12 col-md-4 text-center core-item">
+                <div class="core-item-2">
+                    <img align="left" style="width:20%;margin-left:auto;margin-right:auto;" src="/storage/app/media/time.png">
+                    <div class="core-item-content" style="width:80%">             
                         <label class="text-highlight">納期期限厳守</label>
                         <div class="desc">
-                            日本企業の期限を考える方を意識して、納期期限を厳守する                </div>
+                            日本企業の期限を考える方を意識して、納期期限を厳守する
+                        </div>
                     </div>
-                </div>
+               </div>
             </div>
 
 
-            <div class="col-xs-12 col-sm-12 col-md-4 core-item">
-                <div class="core-item-1">
-                    <span class="img-why-us img-why-us-mekong img-best-price-guarantee hidden-xs hidden-sm"></span>
-                    <div class="core-item-content">
+            <div class="col-xs-12 col-sm-12 col-md-4 core-item core-item-last">
+                <div class="core-item-3">
+                    <img align="left" style="width:20%;margin-left:auto;margin-right:auto;" src="/storage/app/media/cost.png">
+                    <div class="core-item-content" style="width:80%">
                         <label class="text-highlight">開発費用削減</label>
                         <div class="desc">
-                            国内委託より開発費用を削減することができます。        	    	<span data-target="#why_use_2" data-placement="bottom" data-title="Best price guarantee" class="policy policy-2 icon icon-question-sign" data-original-title="" title="" data-pop="1"></span>
+                            国内委託より開発費用を削減することができます。
                         </div>
                     </div>
                 </div>
@@ -122,103 +104,50 @@ postPage = "blog/post"
 <!-- END .main-contents -->
 
 
-<div class="main-contents black-contents">
-    <div class="container-fluid">
-        <h2 class="ft-heading">オフショアハブの<span>利用流れ</span></h2>
-        <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-6" style="padding-bottom:50px">
-                <img style="display:block; width:70%;margin-left:auto;margin-right:auto;" src="/storage/app/media/offshore-matching-01.png">
+<div class="main-contents black-contents bluebg">
+    <!-- <div class="container-fluid black-contents bluebg"> -->
+        <h2 class="ft-heading">オフショアハブの<span>スペシャルティ</span></h2>
+        <div class="row" style="margin:0px;">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                <img style="display:block; width:70%;margin-left:auto;margin-right:auto;" src="/storage/app/media/web-mobile-app.png">
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-6" style="">
-                <img style="width:100%;margin-left:auto;margin-right:auto;" src="/storage/app/media/offshore-development-approach-process-02.png">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                <div style="color: #ffffff">
+                <h3>Webアプリ開発</h3>
+                <div>ECサイト、SNS連動システム、業務システム構築など、複数のWebシステム開発実績があります。スクラッチから、<br/>CMSや既存システムのカスタマイズまで幅広く対応可能です。</div>
+                <span><a class="btn btn-info" href="/services" style="margin-top: 10px;">詳細はこちら</a></span>
+                </div>
+                
+                <div style="color: #ffffff;margin-top:5%;margin-bottom:15%">
+                <h3>モバイルアプリ開発</h3>
+                <div>iPhoneやiPad、Android端末など用のアプリの開発を行います。デバイスや OS に対応のネイティブアプリから、<br/>ハイブリッドアプリまで、あらゆるアプリタイプを対応致します。</div>
+                <span><a class="btn btn-info" href="/services" style="margin-top: 10px;">詳細はこちら</a></span>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-<!-- TAM TEST START .main-contents -->
-<!-- 
-<div class="main-contents">
-    <div class="container">
-        <h2 class="ft-heading">利用流れ</h2>
-        <div class="row">
-            <center>
-                <img src="/themes/ds-offshorehub-theme/assets/images/offshorehub_flow.png" alt="offshorehub flow"/>
-            </center>
-        </div>
-    </div>
-</div>
--->
-<!-- END .main-contents -->
-
-
-<!-- START .main-contents -->
-<div class="main-contents bom-contents">
-    <div class="container">
-        <h2 class="ft-heading">企業<span>一覧</span> 
-            <p class="text-center ft-heading-short">ベトナムオフショア会社をご紹介</p>
-        </h2>
-        
-        <div class="row">
-        
-        {% set posts = companiesList.posts %}
-
-    {% for post in posts %}
-    <div class="col-md-4 col-sm-6 ">
-        <div class="product-list">
-                <div class="ft-item" style="height:400px;">
-                        <span class="ft-image">
-                            <a href="{{ post.url }}">
-                                    <img data-src="{{ post.featured_images[0].filename }}" src="{{ post.featured_images[0].path }}" alt="{{ post.featured_images[0].description }}">
-                            </a>
-                        </span>
-                        <div class="ft-foot">
-                            <h4 class="ft-title">
-                                <a href="{{ post.url }}">{{ post.title }}</a>
-                            </h4>
-                            <p class="info">
-                                    Posted
-                                    {% if post.categories.count %} in {% endif %}
-                                    {% for category in post.categories %}
-                                        <a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
-                                    {% endfor %}
-                                    on {{ post.published_at|date('M d, Y') }}
-                                </p>
-                                {{ html_limit(post.excerpt,150)|raw }}
-                        </div>
-                    </div>
-        </div>
-
-    </div>
-    {% else %}
-        <div class="no-data">{{ noPostsMessage }}</div>
-    {% endfor %}
-           
-        </div>
-    </div>
-</div>
-<!-- END .main-contents -->
+<!-- </div> -->
 
 <!-- START .main-contents .bom-contents -->
 <div class="main-contents">
     <div class="container">
         <div class="row why-us">
             <div class="col-xs-12 col-sm-6 col-md-6">
-                <h2 class="ft-heading ft-heading-left">なぜ <span>ベトナムオフショア開発?</span></h2>
+                <h2 class="ft-heading ft-heading-left">なぜ<span>ベトナムオフショア開発?</span></h2>
                 <ul class="list-unstyled">
                     <li><h4 class="text-highlight"><i class="fa fa-hand-o-right" aria-hidden="true"></i>人材豊富</h4></li>
                     <li>IT分野の優秀人材がある</li>
-                    <li><h4 class="text-highlight"><i class="fa fa-hand-o-right" aria-hidden="true"></i>信頼＆品質</h4></li>
+                    <li><h4 class="text-highlight" style="margin-top:25px;"><i class="fa fa-hand-o-right" aria-hidden="true"></i>信頼＆品質</h4></li>
                     <li>日本企業と付き合い期間長いため、信頼と品質を重視することを常に意思する</li>
-                    <li><h4 class="text-highlight"><i class="fa fa-hand-o-right" aria-hidden="true"></i>開発費用</h4></li>
+                    <li><h4 class="text-highlight" style="margin-top:25px;"><i class="fa fa-hand-o-right" aria-hidden="true"></i>開発費用</h4></li>
                     <li>案件種類によりであるが、国内委託より開発費用のとたるを30％〜50％までの削減できることを提案</li>
                 </ul>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="col-xs-12 col-sm-6 col-md-6" style="margin-bottom:10%">
                 <h2 class="ft-heading ft-heading-left">FAQ<span>s</span></h2>
                 <div class="panel-group accordion-home" id="accordion">
                 {% for i, item in faq.questions %}
-                    <div class="panel panel-default">
+                    <div class="panel panel-default" >
                         <div class="panel-heading">
                             <a class="panel-title collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse{{i}}">
                                 {{ item.question }}
@@ -226,7 +155,16 @@ postPage = "blog/post"
                         </div>
                         <div id="collapse{{i}}" class="panel-collapse collapse">
                             <div class="panel-body">
-                                {{ item.answer|raw }}
+                                {% if item.details %}
+                                    <h3>質問</h3>
+                                    <p>
+                                        {{ item.details|raw }}
+                                    </p>
+                                {% endif %}
+                                <h3>回答</h3>
+                                <p>
+                                    {{ item.answer|raw }}
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -240,8 +178,8 @@ postPage = "blog/post"
 </div>
 <!-- END .main-contents .bom-contents -->
 
-<div class="main-contents black-contents offshore-model">
-    <div class="container-fluid">
+<div class="main-contents black-contents offshore-model rainbowbg">
+    <div class="container">
         <h2 class="ft-heading">オフショア開発の<span>適切モデル</span></h2>
         
         <div class="row">
@@ -283,10 +221,11 @@ postPage = "blog/post"
         <h2 class="ft-heading"><span>オフショア開発記事</span>
             <p class="text-center ft-heading-short">実際経験された方からの記事</p>
         </h2>
-        <div class="row">
+        
+        <div class="row" style="text-align:center;">
         {% for post in posts %}
-            <div class="col-md-4">
-                <div class="post-data" style="height:400px;">
+            <div class="col-md-4 col-sm-6 col-sx-12" style="display: inline-block">
+                <div class="post-data" style="height:400px;max-width:350px;text-align:left;">
                     <div class="plan-image">
                         {% if post.featured_images.count %}
                         <a href="{{ post.url }}">
@@ -312,6 +251,7 @@ postPage = "blog/post"
     {% endfor %}
         </div>
     </div>
+    <center><a class="btn btn-primary btn-lg" href="/category/blogs" role="button">もっと見る</a></center>
 </div>
 
 

@@ -11,7 +11,7 @@ description = "Output static a layout"
     <meta charset="UTF-8">
 
     <!-- title -->
-    <title>{{ this.page.title }}</title>
+    <title>{{ this.page.meta_title }}</title>
 
     <!-- meta description -->
     <meta name="description" content="{{ this.page.meta_description }}" />
@@ -42,6 +42,15 @@ description = "Output static a layout"
 	<!-- Load Fonts via Google Fonts API -->
 	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&amp;subset=vietnamese" rel="stylesheet">
 	<!-- javascripts -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117941251-8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-117941251-8');
+    </script>
+
 	<script type="text/javascript " src="{{ 'assets/js/modernizr.custom.17475.js'|theme }}"></script>
 
 	<script type="text/javascript " src="{{ 'assets/js/jquery.min.js'|theme }}"></script>
@@ -72,30 +81,29 @@ description = "Output static a layout"
 	<div id="wrapper ">
         <!-- Header -->
         {% partial 'header' %}
-
-        <!-- Content -->
-        <!-- START #page-header -->
-<div id="header-banner">
-                <div class="banner-overlay">
-                    <div class="container">
-                        <div class="row">
-                            <section class="col-sm-12">
-                                <h1 class="text-upper">{{ this.page.title }}</h1>
-                                </section>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- START .main-contents -->
-            <div class="main-contents">
+        
+                <!-- START #page-header -->
+        <div id="header-banner">
+            <div class="banner-overlay">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-12">
-                        {% component 'staticPage' %}
-                        </div>
+                        <section class="col-sm-12">
+                            <h1 class="text-upper">{{ this.page.title }}</h1>
+                            </section>
                     </div>
                 </div>
             </div>
+        </div>
+            <!-- START .main-contents -->
+        <div class="main-contents">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                    {% component 'staticPage' %}
+                    </div>
+                </div>
+            </div>
+        </div>
        
         <!-- Footer -->
         {% partial 'footer' %}

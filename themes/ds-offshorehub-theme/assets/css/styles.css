@@ -68,15 +68,15 @@ a:hover{
     position: relative;
 }
 #main-menu li a {
-	font-family: 'Roboto Condensed', sans-serif;
-	color:#fff;
-	display:block;
-	line-height:20px;
-	padding:10px 8px; 
-	font-size:15px;
-	font-weight:500;
-	text-transform:uppercase;
-	}
+    font-family: 'Roboto Condensed', sans-serif;
+    color:#fff;
+    display:block;
+    line-height:20px;
+    padding:10px 8px; 
+    font-size:15px;
+    font-weight:500;
+    text-transform:uppercase;
+    }
 #main-menu li:hover > a, #main-menu li.current-menu-item > a {color:#fff;}
 #main-menu li ul, #main-menu li ul li ul {
     background-color: #fff;
@@ -290,7 +290,7 @@ blockquote strong {font-size:16px;}
     border: 0;
 }
 .submit-btn{
-    padding: 10px;	
+    padding: 10px;  
 }
 .submit-btn input {
     background: none repeat scroll 0 0 #FFE401;
@@ -1176,7 +1176,7 @@ iframe {
 }
 
 .tour-list .ft-title a{
-	font-size: 16px;
+    font-size: 16px;
 }
 .box_style_1{
     background:#ececec;
@@ -1435,7 +1435,7 @@ li {
 }
 ul ul {
     margin:0px;
-	padding:0px;
+    padding:0px;
 }
 ol {
     float: none;
@@ -1446,14 +1446,14 @@ ol ol {
     margin-left: 20px;
 }
 ol li {
-	width: 100%;
+    width: 100%;
     list-style: decimal;
 }
 .thumb,
 figure {
-	float:left;
-	width:100%;
-	overflow:hidden;
+    float:left;
+    width:100%;
+    overflow:hidden;
     position: relative;
 }
 .clear {
@@ -1463,8 +1463,8 @@ figure {
 }
 .thumb img,
 figure img{
-	float:left;
-	width:100%;
+    float:left;
+    width:100%;
 }
 
 .has-padding [class*="col-md"] {
@@ -1722,3 +1722,78 @@ figure img{
         width: 875px;
     }
 }
+
+
+/* Tam tried to fix menu Responsive Styles*/
+@media all and (max-width : 760px){
+    #main-menu ul {  height: auto; }
+    #main-menu ul > li {  float: none; width: 100%; }
+    #main-menu ul a { line-height: 40px; }
+    #main-menu ul ul { position: relative; }
+}
+
+
+/* Custom CSS DevSamurai Team */
+#top-header {background:#fff;}
+
+
+#main-menu li ul, #main-menu li ul li ul {
+    background: rgba(0,0,0,0.8);
+}
+
+#main-menu ul li:hover {
+    background-color: #99ccff;
+}
+
+#main-menu li ul li a, #main-menu li ul li ul li a {
+    color: #fff;
+}
+
+
+.offshore-model{
+    padding-bottom:0px;
+}
+.carousel{
+    padding-bottom: 50px;
+}
+.carousel .item{
+    
+}
+.carousel .item img{
+    display:block;
+    max-height: 370px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.bluestarbg {
+    background-image: url('/storage/app/media/blue_star_background.jpg');
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+.bluebg {
+    background-image: url('/storage/app/media/blue_bg.png');
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+.darkbluebg {
+    background-image: url('/storage/app/media/darkblue_bg.png');
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;  
+    padding-bottom: 65px;
+}
+.rainbowbg {
+    background-image: url('/storage/app/media/rainbow.jpg');
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+.bluebanner {
+    background-image: url('/storage/app/media/blue_banner.jpg');
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+

@@ -14,35 +14,72 @@ items:
             cssClass: ''
             isExternal: '0'
     -
-        title: サービス
-        nesting: '0'
-        type: static-page
+        title: 開発サービス
+        nesting: ''
+        type: cms-page
         url: ''
         code: ''
         reference: services
         cmsPage: ''
-        replace: '0'
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
     -
-        title: 企業一覧
-        nesting: '0'
-        type: blog-category
-        url: ''
+        title: 成功事列
+        type: url
+        url: '#'
         code: ''
-        reference: '8'
-        cmsPage: blog/category
-        replace: '0'
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
+        items:
+            -
+                title: 商品販売マーケットプレース
+                nesting: ''
+                type: cms-page
+                url: ''
+                code: ''
+                reference: case-study-1
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'IT x 農業システム'
+                nesting: ''
+                type: cms-page
+                url: ''
+                code: ''
+                reference: case-study-2
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 人事・採用管理システム
+                nesting: ''
+                type: cms-page
+                url: ''
+                code: ''
+                reference: hr-system
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
     -
         title: オフショア開発記事
         nesting: '0'
         type: blog-category
+        url: ''
         code: ''
         reference: '7'
         cmsPage: blog/category

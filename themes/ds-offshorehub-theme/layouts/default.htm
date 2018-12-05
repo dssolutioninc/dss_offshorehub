@@ -1,28 +1,33 @@
 description = "Default layout"
 ==
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <!-- START head -->
 
 <head>
+    
+
     <!-- Site meta charset -->
     <meta charset="UTF-8">
 
     <!-- title -->
-    <title>Offshore consulting – Vietnam outsourcing marketplace</title>
+    <!-- title -->
+    <title>OffshoreHub – ベトナムオフショア開発サービス</title>
 
     <!-- meta description -->
     <meta name="description" content="{{ this.page.meta_description }}" />
 
     <!-- meta keywords -->
-    <meta name="keywords" content="{{ this.page.meta_title }}" />
+    <meta name="keywords" content="ベトナムオフショア開発" />
+
 
     <!-- meta viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
     <!-- favicon -->
-    <!-- <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}""> -->
+    <link rel="icon" type="image/png" href="/storage/app/media/favicon.png" />
+<!--     <link rel="icon" type="image/vnd.microsoft.icon" href="/storage/app/media/favicon.icon" /> --> 
+<!--     <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}""> -->
     <!-- bootstrap 3 stylesheets -->
     <link rel="stylesheet" type="text/css" href="{{'assets/vendor/bs3/css/bootstrap.css'|theme }}" media=" all " />
 	<!-- template stylesheet -->
@@ -41,6 +46,16 @@ description = "Default layout"
 	<!-- Load Fonts via Google Fonts API -->
 	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&amp;subset=vietnamese" rel="stylesheet">
 	<!-- javascripts -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117941251-8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-117941251-8');
+    </script>
+
 	<script type="text/javascript " src="{{ 'assets/js/modernizr.custom.17475.js'|theme }}"></script>
 
 	<script type="text/javascript " src="{{ 'assets/js/jquery.min.js'|theme }}"></script>

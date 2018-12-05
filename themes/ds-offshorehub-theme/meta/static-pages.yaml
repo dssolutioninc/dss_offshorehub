@@ -1,3 +1,4 @@
 static-pages:
     services: {  }
     about-us: {  }
+    services-mobile-app: {  }

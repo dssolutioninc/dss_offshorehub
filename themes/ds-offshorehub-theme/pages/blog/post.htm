@@ -31,9 +31,12 @@ function onEnd(){
     <article class="post-content">
        {{ post.content_html|raw }}
     </article>
+    
+    {% partial 'blog_contact' %}
     <!-- END .post-content -->
+    
 
-    <h2>Related posts</h2>
+    <h2>関連記事</h2>
 <ul>
     {% for Post in blogRelated.posts %}
         <a href="{{Post.url}}"><li>{{ Post.title }}</li></a>

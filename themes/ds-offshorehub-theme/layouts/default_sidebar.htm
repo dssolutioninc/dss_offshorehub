@@ -1,22 +1,24 @@
 description = "Default layout"
 ==
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <!-- START head -->
 
 <head>
+    
+    <meta name="og:description" content="{{ this.page.meta_description }}" />
+    <meta name="og:title" content="{{ this.page.meta_title }}" />
     <!-- Site meta charset -->
     <meta charset="UTF-8">
 
     <!-- title -->
-    <title>Offshore consulting – Vietnam outsourcing marketplace</title>
+    <title>OffshoreHub – ベトナムオフショア開発サービス</title>
 
     <!-- meta description -->
-    <meta name="description" content="YOUR META DESCRIPTION GOES HERE" />
+    <meta name="description" content="DevSamurai株式会社 - ベトナムオフショア開発サービス" />
 
     <!-- meta keywords -->
-    <meta name="keywords" content="YOUR META KEYWORDS GOES HERE" />
+    <meta name="keywords" content="ベトナムオフショア開発" />
 
     <!-- meta viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -37,6 +39,15 @@ description = "Default layout"
 	<!-- Load Fonts via Google Fonts API -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&amp;subset=vietnamese" rel="stylesheet "/>
 	<!-- javascripts -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117941251-8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-117941251-8');
+    </script>
+
 	<script type="text/javascript " src="{{ 'assets/js/modernizr.custom.17475.js'|theme }}"></script>
 
 	<script type="text/javascript " src="{{ 'assets/js/jquery.min.js'|theme }}"></script>

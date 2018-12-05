@@ -1,0 +1,15 @@
+1.0.1:
+    - First version of Seo plugin
+1.0.2:
+    - Create pages table
+    - create_pages_table.php
+1.0.3:
+    - Component default, keywords are optional
+1.0.4:
+    - Fix permissions bug
+1.0.5:
+    - Allow to use meta_title and meta_description fields in layout (compatible with Page metas and JKShop)
+1.0.6:
+    - Export
+1.0.7:
+    - Export csv and images in a zip file

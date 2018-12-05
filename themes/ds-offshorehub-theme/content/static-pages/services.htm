@@ -1,35 +1,84 @@
 [viewBag]
-title = "サービス"
-url = "/services"
+title = "マーケットプレース構築事例"
+url = "/services/web-app/ec-app"
 layout = "static-layout"
 is_hidden = 0
 navigation_hidden = 0
+meta_title = "OffshoreHub - Webアプリ開発"
+meta_description = "Webアプリ開発サービース"
 ==
-<h2>無料</h2>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-6 col-md-6" style="float:left; padding-top:5%;;padding-bottom:10%;"><img src="/storage/app/media/uploaded-files/marketplace.jpg" style="width: 100%; max-width: 600px;" class="fr-fic fr-dii"></div>
+		<div class="col-xs-12 col-sm-6 col-md-6" style="padding-top:5%;padding-bottom:10%;">
 
-<ul class="list-style list-style3 list-style-box">
-	<li>オフショア開発コンサルティングサービス</li>
-	<li>お客様とオフショア会社のマッチングサービス</li>
-</ul>
+			<h3>子供用の商品販売マーケットプレース</h3>
 
-<h2>プレミアムサービス</h2>
+			<h3>クラインアント</h3>
 
-<ul class="list-style list-style3 list-style-box">
-	<li>オフショア開発ツアー、現地でオフショア開発をお試みする</li>
-	<li>プロジェクト管理、コミュニケーションのプラットフォームを提供する</li>
-	<li>人材供給 (プロジェクト管理者、BrSE)</li>
-</ul>
+			<p>日本企業</p>
 
-<h2>OffshoreHubの利用流れ</h2>
+			<h3>概要機能</h3>
 
-<ul class="list-style list-style4 list-style-box">
-	<li>OffshoreHub.jpのフォームにて見積もり依頼の送信を頂</li>
-	<li>OffshoreHubにて見積もり依頼内容を確認いたします。その後、弊社スタッフより御社に、見積もり依頼内容を確認させていただきます。</li>
-	<li>弊社のオフショア開発パートナーに一斉に見積もり依頼が配信され、対応可能なオフショア企業から見積もりが届きます。弊社は提案や見積もりをスクリング致します。</li>
-	<li>お客様は見積もりを確認した上、オフショア会社を選択してプロジェクト開始する　（必要であれば弊社のオフショア開発ツアーサービスを利用して、現地でオフショア会社をお試しする）１〜４まで全て無料で対応させて頂きます。しかし、有料のプレミアムサービスも提供いたします。</li>
-</ul>
+			<ul class="list-style list-style4 list-style-box">
+				<li>販売店側：申込・登録、商品登録管理、在庫管理、キャンペン作成、売上管理、問合せ・連絡</li>
+				<li>一般ユーザ側：登録、商品検索、注文、お支払、評価、コメント、問い合せ、商品注文履歴</li>
+				<li>システム管理：販売店管理、ユーザ管理、決済管理、広告</li>
+			</ul>
+		</div>
+	</div>
+	<div class="row" style="border-bottom: 1px solid #cccccc;">
+		<div class="col-xs-12 col-sm-7 col-md-7" style="float:right;padding-bottom:10%;"><img src="/storage/app/media/uploaded-files/ec_architecture.jpg" style="width: 100%; max-width: 600px;" class="fr-fic fr-dii"></div>
+		<div class="col-xs-12 col-sm-5 col-md-5">
 
-<ul class="list-style list-style4">
-	<li>弊社が提供しいるプラットフォームを利用して、プロジェクト管理及びオフショア会社とコミュニケーションする。</li>
-	<li>弊社はお客様のプロジェクトをスムーズに成功するように、プロジェクト管理者やBrSEの人材も供給致します。</li>
-</ul>
+			<h3>アーキテクチャー</h3>
+
+			<p>マイクロサービスデザインを活用し、システムのアーキテクチャーを構成しました。</p>
+
+			<p><strong>フロントエンド</strong>
+				<br>HTTPSよりバックエンドが提供するREST APIを利用し、ユーザーなどと直接やり取りをする要素のことを構成します。
+				<br>
+				<br>Webアプリ
+				<br>React.JS, Bootstrap, CSSX, レスポンシブ対応
+				<br>
+				<br>iOSアプリ
+				<br>Swift
+				<br>
+				<br>Androind
+				<br>Kotlin
+				<br>
+				<br><strong>API ゲートウェイ</strong>
+				<br>多数のAPIをサーバサイドでモニタリング、認証、管理、セキュリティ設定
+				<br>開発言語 : Java
+				<br>フレームワーク: Spring Cloud API Gateway
+				<br>
+				<br><strong>バックエンド</strong>
+				<br>処理を行って結果を出力したり、記録媒体に保存したりして、REST APIを提供します。
+				<br>マイクロサービスデザインを活用して、サービスを多数のマイクロサービスを分けます。マイクロサービス内の連携はAMQPメッセジング（RabbitMQ）を利用します。
+				<br>
+				<br>開発言語 : Java
+				<br>フレームワーク: Spring Boot, Spring Cloud, Spring Data</p>
+		</div>
+	</div>
+	<div class="row">
+
+		<h1 style="color:red; text-align:center; margin:25px 0px;">開発プロセス</h1>
+		<div class="col-xs-12 col-sm-6 col-md-6">
+			<div><img src="/storage/app/media/uploaded-files/scrum_process.png" style="width: 100%;" class="fr-fic fr-dii"></div>
+			<div class="text-center"><span>スクラムプロセス</span></div>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-6">
+			<div><img src="/storage/app/media/uploaded-files/workflow.jpg" style="width: 100%;" class="fr-fic fr-dii"></div>
+			<div class="text-center"><span>デプロイメントパイプライン</span></div>
+		</div>
+	</div>
+	<div class="row" style="text-align: center; margin-top: 15%;">
+		<div align="center" style="width: 100%; font-size: 20px; text-align: center;">お気にする点がございましたら、気軽にオフショアハブまでお問い合わせてください。</div>
+		<div>
+			<br>
+		</div><span align="center" style="width: 100%; font-size: 20px; text-align: center;">電話でお問い合わせはこちらまで <span style="color: red; font-weight: bold;">050-3627-8910</span></span>
+	</div>
+	<div align="center">
+		<a href="/contact"><img style="width: 40%; padding-top:1%;padding-bottom:10%" src="/storage/app/media/contact_blue2.png" class="fr-fic fr-dib"></a>
+	</div>
+</div>
